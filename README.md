@@ -1,5 +1,7 @@
 # Spacegray.vim
 
+> Attention: Spacegray.vim is current under heavy construction.
+
 Spacegray is a colorscheme for Vim modeled after
 the [spacegray](https://github.com/zdne/spacegray-xcode) theme for Xcode.
 
