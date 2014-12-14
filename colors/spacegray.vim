@@ -29,12 +29,12 @@ hi Statement       ctermbg=NONE ctermfg=13     guibg=NONE     guifg=#A57A9E  cte
 hi String          ctermbg=NONE ctermfg=10     guibg=NONE     guifg=#95B47B  cterm=NONE      gui=NONE
 hi Type            ctermbg=NONE ctermfg=66     guibg=NONE     guifg=#E5C078  cterm=NONE      gui=NONE
 
-hi Cursor          ctermbg=NONE ctermfg=NONE   guibg=#6c6c6c  guifg=NONE     cterm=NONE      gui=NONE
+hi Cursor          ctermbg=NONE ctermfg=NONE   guibg=#6C6C6C  guifg=NONE     cterm=NONE      gui=NONE
 hi CursorColumn    ctermbg=0    ctermfg=NONE   guibg=#303030  guifg=NONE     cterm=NONE      gui=NONE
 hi CursorLine      ctermbg=0    ctermfg=NONE   guibg=#303030  guifg=NONE     cterm=NONE      gui=NONE
 
 hi Todo            ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=reverse   gui=reverse
-hi Error           ctermbg=52   ctermfg=12     guibg=NONE     guifg=#af5f5f  cterm=underline gui=reverse
+hi Error           ctermbg=52   ctermfg=12     guibg=NONE     guifg=#AF5F5F  cterm=underline gui=reverse
 hi ErrorMsg        ctermbg=NONE ctermfg=12     guibg=NONE     guifg=#C5735E  cterm=NONE      gui=NONE
 hi ModeMsg         ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=#808080  cterm=NONE      gui=NONE
 hi MoreMsg         ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=#808080  cterm=NONE      gui=NONE
@@ -48,20 +48,20 @@ hi DiffText        ctermbg=234  ctermfg=12     guibg=NONE     guifg=#81A2BE  cte
 hi helpLeadBlank   ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=NONE      gui=NONE
 hi helpNormal      ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=NONE      gui=NONE
 
-hi LineNr          ctermbg=NONE ctermfg=8      guibg=#242627  guifg=#3e4853  cterm=NONE      gui=NONE
+hi LineNr          ctermbg=NONE ctermfg=8      guibg=#242627  guifg=#3E4853  cterm=NONE      gui=NONE
 hi CursorLineNr    ctermbg=NONE ctermfg=243    guibg=NONE     guifg=#808080  cterm=NONE      gui=NONE
 
-hi Pmenu           ctermbg=233  ctermfg=137    guibg=#171717  guifg=#e8a973  cterm=none      gui=NONE
-hi PmenuSel        ctermbg=234  ctermfg=196    guibg=#252525  guifg=#ff2a1f  cterm=bold      gui=bold
+hi Pmenu           ctermbg=233  ctermfg=137    guibg=#171717  guifg=#E8A973  cterm=none      gui=NONE
+hi PmenuSel        ctermbg=234  ctermfg=196    guibg=#252525  guifg=#FF2A1F  cterm=bold      gui=bold
 hi PmenuSbar       ctermbg=233  ctermfg=000    guibg=#333233  guifg=#000000  cterm=NONE      gui=none
 hi PmenuThumb      ctermbg=235  ctermfg=137    guibg=NONE     guifg=#171717  cterm=none      gui=none
 
-hi WildMenu        ctermbg=110  ctermfg=235    guibg=#8fafd7  guifg=#141617  cterm=bold      gui=bold
+hi WildMenu        ctermbg=110  ctermfg=235    guibg=#8FAFD7  guifg=#141617  cterm=bold      gui=bold
 
 hi StatusLine      ctermbg=235  ctermfg=249    guibg=#303537  guifg=#B3B8C4  cterm=NONE      gui=NONE
 hi StatusLineNC    ctermbg=232  ctermfg=239    guibg=#1C1F20  guifg=#7C7F88  cterm=NONE      gui=italic
 
-hi Underlined      ctermbg=NONE ctermfg=66     guibg=NONE     guifg=#5f8787  cterm=NONE      gui=NONE
+hi Underlined      ctermbg=NONE ctermfg=66     guibg=NONE     guifg=#5F8787  cterm=NONE      gui=NONE
 hi Ignore          ctermbg=NONE ctermfg=250    guibg=NONE     guifg=#BCBCBC  cterm=NONE      gui=NONE
 
 hi Visual          ctermbg=8    ctermfg=NONE   guibg=#292C2E  guifg=NONE     cterm=NONE      gui=NONE
@@ -71,7 +71,7 @@ hi FoldColumn      ctermbg=NONE ctermfg=242    guibg=#1C1C1C  guifg=#6C6C6C  cte
 hi Folded          ctermbg=NONE ctermfg=242    guibg=#1C1C1C  guifg=#6C6C6C  cterm=NONE      gui=NONE
 hi VertSplit       ctermbg=238  ctermfg=238    guibg=#444444  guifg=#444444  cterm=NONE      gui=NONE
 
-hi IncSearch       ctermbg=NONE ctermfg=NONE   guibg=#af5f5f  guifg=#141617  cterm=NONE      gui=NONE
+hi IncSearch       ctermbg=NONE ctermfg=NONE   guibg=#AF5F5F  guifg=#141617  cterm=NONE      gui=NONE
 hi Search          ctermbg=NONE ctermfg=NONE   guibg=#887F32  guifg=#141617  cterm=NONE      gui=NONE
 
 hi TabLine         ctermbg=232  ctermfg=249    guibg=#141617  guifg=#B3B8C4  cterm=NONE      gui=NONE
