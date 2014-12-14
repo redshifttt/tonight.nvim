@@ -1,6 +1,6 @@
 " SpaceGray.vim -- Vim colorscheme.
 " Maintainer: Akshay Hegde (github.com/ajh17)
-" A colorscheme loosely modeled after the spacegray theme for Xcode.
+" A colorscheme modeled after the spacegray theme for Xcode.
 " This colorscheme is 256color and up only.
 
 " Setup {{{1
@@ -27,7 +27,7 @@ hi PreProc         ctermbg=NONE ctermfg=109    guibg=NONE     guifg=#85A7A5  cte
 hi Special         ctermbg=NONE ctermfg=103    guibg=NONE     guifg=#7D8FA3  cterm=NONE      gui=NONE
 hi Statement       ctermbg=NONE ctermfg=13     guibg=NONE     guifg=#A57A9E  cterm=NONE      gui=NONE
 hi String          ctermbg=NONE ctermfg=10     guibg=NONE     guifg=#95B47B  cterm=NONE      gui=NONE
-hi Type            ctermbg=NONE ctermfg=66      guibg=NONE     guifg=#E5C078  cterm=NONE      gui=NONE
+hi Type            ctermbg=NONE ctermfg=66     guibg=NONE     guifg=#E5C078  cterm=NONE      gui=NONE
 
 hi Cursor          ctermbg=NONE ctermfg=NONE   guibg=#6c6c6c  guifg=NONE     cterm=NONE      gui=NONE
 hi CursorColumn    ctermbg=0    ctermfg=NONE   guibg=#303030  guifg=NONE     cterm=NONE      gui=NONE
@@ -58,8 +58,8 @@ hi PmenuThumb      ctermbg=235  ctermfg=137    guibg=NONE     guifg=#171717  cte
 
 hi WildMenu        ctermbg=110  ctermfg=235    guibg=#8fafd7  guifg=#141617  cterm=bold      gui=bold
 
-hi StatusLine      ctermbg=235  ctermfg=249   guibg=#303537  guifg=#B3B8C4  cterm=NONE      gui=NONE
-hi StatusLineNC    ctermbg=232  ctermfg=239   guibg=#1C1F20  guifg=#7C7F88  cterm=NONE      gui=italic
+hi StatusLine      ctermbg=235  ctermfg=249    guibg=#303537  guifg=#B3B8C4  cterm=NONE      gui=NONE
+hi StatusLineNC    ctermbg=232  ctermfg=239    guibg=#1C1F20  guifg=#7C7F88  cterm=NONE      gui=italic
 
 hi Underlined      ctermbg=NONE ctermfg=66     guibg=NONE     guifg=#5f8787  cterm=NONE      gui=NONE
 hi Ignore          ctermbg=NONE ctermfg=250    guibg=NONE     guifg=#bcbcbc  cterm=NONE      gui=NONE
@@ -81,6 +81,10 @@ hi TabLineSel      ctermbg=101  ctermfg=235    guibg=#7D8FA3  guifg=#111314  cte
 hi Directory       ctermbg=NONE ctermfg=24     guibg=NONE     guifg=#5FAFAF  cterm=NONE      gui=NONE
 hi MatchParen      ctermbg=NONE ctermfg=11     guibg=NONE     guifg=#E5C078  cterm=bold      gui=bold
 
+hi SpellBad        ctermbg=52   ctermfg=9      guibg=#5F0000  guifg=#CC6666  cterm=NONE      gui=NONE
+hi SpellRare       ctermbg=53   ctermfg=13     guibg=#5F005F  guifg=#B294BB  cterm=NONE      gui=NONE
+hi SpellCap        ctermbg=17   ctermfg=12     guibg=#00005F  guifg=#81A2BE  cterm=NONE      gui=NONE
+hi SpellLocal      ctermbg=24   ctermfg=14     guibg=#005F5F  guifg=#8ABEB7  cterm=NONE      gui=NONE
 
 " Highlight Links {{{1
 hi link Boolean             Constant
