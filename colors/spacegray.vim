@@ -35,6 +35,7 @@ hi CursorLine      ctermbg=NONE ctermfg=NONE  guibg=#303030  guifg=NONE     cter
 
 hi Todo            ctermbg=NONE ctermfg=NONE  guibg=NONE     guifg=NONE     cterm=reverse  gui=reverse
 hi Error           ctermbg=NONE ctermfg=NONE  guibg=NONE     guifg=#af5f5f  cterm=reverse  gui=reverse
+hi ErrorMsg        ctermbg=NONE ctermfg=NONE  guibg=NONE     guifg=#C5735E  cterm=NONE     gui=NONE
 hi ModeMsg         ctermbg=NONE ctermfg=NONE  guibg=NONE     guifg=#808080  cterm=NONE     gui=NONE
 hi MoreMsg         ctermbg=NONE ctermfg=NONE  guibg=NONE     guifg=#808080  cterm=NONE     gui=NONE
 hi WarningMsg      ctermbg=NONE ctermfg=NONE  guibg=NONE     guifg=#AF5F5F  cterm=NONE     gui=NONE
