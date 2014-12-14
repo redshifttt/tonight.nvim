@@ -6,6 +6,17 @@ the [spacegray](https://github.com/zdne/spacegray-xcode) theme for Xcode.
 For now, Spacegray can only be used in MacVim/GVim. Support for terminal Vim is
 coming very soon.
 
+## Screenshots
+
+Here are a few screenshots of Spacegray:
+
+### C
+
+![Spacegray in C](http://cl.ly/Yxcd/C-spacegray.png)
+
+### JavaScript
+![Spacegray in JavaScript](http://cl.ly/Yx75/JS-Spacegray.png)
+
 ## Installation
 
 If you don't have a preferred installation method, I recommend installing
@@ -16,4 +27,4 @@ paste:
 
 Then in your ~/.vimrc, add this line:
 
-> colorscheme spacegray
+    colorscheme spacegray
