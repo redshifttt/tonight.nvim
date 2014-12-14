@@ -19,6 +19,9 @@ Here are a few screenshots of Spacegray:
 ### JavaScript
 ![Spacegray in JavaScript](http://cl.ly/Yx75/JS-Spacegray.png)
 
+### Vim
+![Spacegray in Vim](http://cl.ly/Yxfr/vim-spacegray.png)
+
 ## Installation
 
 If you don't have a preferred installation method, I recommend installing
