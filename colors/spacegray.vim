@@ -58,7 +58,7 @@ hi PmenuThumb      ctermfg=137   ctermbg=235   guibg=NONE     guifg=#171717  cte
 hi WildMenu        ctermbg=110   ctermfg=235   guibg=#8fafd7  guifg=#141617  cterm=bold     gui=bold
 
 hi StatusLine      ctermbg=NONE  ctermfg=NONE  guibg=#303537  guifg=#B3B8C4  cterm=NONE     gui=NONE
-hi StatusLineNC    ctermbg=NONE  ctermfg=NONE  guibg=#303537  guifg=#7C7F88  cterm=NONE     gui=italic
+hi StatusLineNC    ctermbg=NONE  ctermfg=NONE  guibg=#1C1F20  guifg=#7C7F88  cterm=NONE     gui=italic
 
 hi Underlined      ctermbg=NONE  ctermfg=NONE  guibg=NONE     guifg=#5f8787  cterm=NONE     gui=NONE
 hi Ignore          ctermbg=NONE  ctermfg=NONE  guibg=NONE     guifg=#bcbcbc  cterm=NONE     gui=NONE
