@@ -14,7 +14,7 @@ let colors_name = 'spacegray'
 
 
 " Colorscheme definitions {{{1
-hi Comment         ctermbg=NONE  ctermfg=NONE  guibg=NONE     guifg=#3E4853  cterm=NONE     gui=NONE
+hi Comment         ctermbg=NONE  ctermfg=NONE  guibg=NONE     guifg=#4C5966  cterm=NONE     gui=NONE
 hi NonText         ctermbg=NONE  ctermfg=NONE  guibg=NONE     guifg=#3E4853  cterm=NONE     gui=NONE
 hi Normal          ctermbg=NONE  ctermfg=NONE  guibg=#141617  guifg=#B3B8C4  cterm=NONE     gui=NONE
 hi Title           ctermbg=NONE  ctermfg=NONE  guibg=NONE     guifg=#FFFFFF  cterm=NONE     gui=NONE
