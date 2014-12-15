@@ -41,7 +41,17 @@ if using tmux or screen, `screen-256color`.
 Spacegray will look good in a dark terminal colorscheme, but if you use
 Spacegray's color palette, it will look beautiful.
 
+### iTerm2
+
 If you use iTerm2, Spacegray.itemcolors is provided with the download.
+
+### Terminator
+
+For terminator users, Spacegray.terminator is provided and can be installed by
+copying to `~/.config/terminator/config` on Linux or `$XDG_CONFIG_HOME/terminator/config`
+if you're running OS X.
+
+### Xresources
 
 For Linux/BSD users, here is a sample ~/.Xresources:
 
