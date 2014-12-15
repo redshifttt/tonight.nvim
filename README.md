@@ -5,9 +5,6 @@
 Spacegray is a colorscheme for Vim loosely modeled after
 the [spacegray](https://github.com/zdne/spacegray-xcode) theme for Xcode.
 
-For now, Spacegray can only be used in MacVim/GVim. Support for terminal Vim is
-coming very soon.
-
 ## Screenshots
 
 Here are a few screenshots of Spacegray:
@@ -33,3 +30,13 @@ paste:
 Then in your ~/.vimrc, add this line:
 
     colorscheme spacegray
+
+## Terminal Environment
+
+If you use Spacegray inside a Terminal, please make sure you use a Terminal
+with 256 color support.
+
+The image below contains the Spacegray palette. You can use a color picker to
+use the colors for your Terminal:
+![Spacegray Palette](https://dl.dropboxusercontent.com/u/34865/Misc%20Screenshots/ansi-colors.png)
+
