@@ -88,12 +88,14 @@ hi SpellCap        ctermbg=17   ctermfg=12     guibg=#00005F  guifg=#81A2BE  cte
 hi SpellLocal      ctermbg=24   ctermfg=14     guibg=#005F5F  guifg=#8ABEB7  cterm=NONE      gui=NONE
 
 " Highlight Links {{{1
+" Most of the links are mercilessly stolen from romainl's amazing Apprentice
+" theme. (https://github.com/romainl/Apprentice)
 hi link Boolean             Constant
 hi link Character           Constant
 hi link Number              Constant
 
-hi link Float               Number
 hi link Conceal             Normal
+hi link Float               Number
 
 hi link Define              Preproc
 hi link Include             Preproc
@@ -103,24 +105,26 @@ hi link PreCondit           PreProc
 hi link Conditional         Statement
 hi link Exeption            Statement
 hi link HelpCommand         Statement
-hi link Label               Statement
 hi link HelpExample         Statement
-hi link Repeat              Statement
-hi link Operator            Statement
 hi link Keyword             Statement
+hi link Label               Statement
+hi link Operator            Statement
+hi link Repeat              Statement
 
-hi link Typedef             Type
 hi link StorageClass        Type
 hi link Structure           Type
+hi link Typedef             Type
 
-hi link Tag                 Special
-hi link Delimiter           Special
 hi link Debug               Special
+hi link Delimiter           Special
+hi link SpecialChar         Special
+hi link SpecialComment      Special
+hi link Tag                 Special
 
 hi link htmlEndTag          htmlTagName
 hi link htmlLink            Function
 hi link htmlSpecialTagName  htmlTagName
 hi link htmlTag             htmlTagName
 
-hi link diffRemoved         Constant
 hi link diffAdded           String
+hi link diffRemoved         Constant
