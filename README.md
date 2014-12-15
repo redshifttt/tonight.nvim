@@ -38,5 +38,6 @@ with 256 color support.
 
 The image below contains the Spacegray palette. You can use a color picker to
 use the colors for your Terminal:
+
 ![Spacegray Palette](https://dl.dropboxusercontent.com/u/34865/Misc%20Screenshots/ansi-colors.png)
 
