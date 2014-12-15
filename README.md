@@ -32,12 +32,42 @@ Then in your ~/.vimrc, add this line:
 ## Terminal Environment
 
 If you use Spacegray inside a Terminal, please make sure you use a Terminal
-with 256 color support.
+with 256 color support. Most these days are. Ensure that the default TERM
+contains the string `256color`. An example would be `xterm-256color` or
+if using tmux or screen, `screen-256color`.
+
+### Terminal Color Palette
+
+Spacegray will look good in a dark terminal colorscheme, but if you use
+Spacegray's color palette, it will look beautiful.
 
 If you use iTerm2, Spacegray.itemcolors is provided with the download.
 
-Otherwise, the image below contains the Spacegray palette.
-You can use a color picker to use the colors for your Terminal:
+For Linux/BSD users, here is a sample ~/.Xresources:
 
-![Spacegray Palette](https://dl.dropboxusercontent.com/u/34865/Misc%20Screenshots/ansi-colors.png)
-
+    *background: #111314
+    *foreground: #B7BBB7
+    ! black
+    *color0: #2C2F33
+    *color8: #4B5056
+    ! red
+    *color1: #B04C50
+    *color9: #B04C50
+    ! green
+    *color2: #919652
+    *color10: #94985B
+    ! yellow
+    *color3: #E2995C
+    *color11: #E2995C
+    ! blue
+    *color4: #66899D
+    *color12: #66899D
+    ! magenta
+    *color5: #8D6494
+    *color13: #8D6494
+    ! cyan
+    *color6: #527C77
+    *color14: #527C77
+    ! white
+    *color7: #606360
+    *color15: #DDE3DC
