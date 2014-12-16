@@ -2,7 +2,7 @@
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   title_transmit_fg_color = "#b7bbb7"
   title_inactive_fg_color = "#b7bbb7"
-  borderless = True
+  borderless = False
   title_receive_bg_color = "#5d7f90"
   title_transmit_bg_color = "#111314"
   title_receive_fg_color = "#b7bbb7"
