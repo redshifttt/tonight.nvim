@@ -129,3 +129,11 @@ hi link htmlTag             htmlTagName
 
 hi link diffAdded           String
 hi link diffRemoved         Constant
+
+" Rails colors
+hi link rubyRailsARAssociationMethod  Statement
+hi link rubyRailsARValidationMethod   Statement
+hi link rubyRailsARMethod             Statement
+hi link rubyRailsARCallbackMethod     Statement
+hi link rubyRailsARClassMethod        Statement
+
