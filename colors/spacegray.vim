@@ -41,7 +41,7 @@ hi Error           ctermbg=52   ctermfg=12     guibg=NONE     guifg=#AF5F5F  cte
 hi ErrorMsg        ctermbg=NONE ctermfg=9      guibg=NONE     guifg=#C5735E  cterm=NONE      gui=NONE
 hi ModeMsg         ctermbg=NONE ctermfg=249    guibg=NONE     guifg=#808080  cterm=NONE      gui=NONE
 hi MoreMsg         ctermbg=NONE ctermfg=249    guibg=NONE     guifg=#808080  cterm=NONE      gui=NONE
-hi WarningMsg      ctermbg=NONE ctermfg=12     guibg=NONE     guifg=#AF5F5F  cterm=NONE      gui=NONE
+hi WarningMsg      ctermbg=NONE ctermfg=12     guibg=NONE     guifg=#7D8FA3  cterm=NONE      gui=NONE
 
 hi DiffAdd         ctermbg=65   ctermfg=193    guibg=#5F875F  guifg=#D7FFAF  cterm=NONE      gui=NONE
 hi DiffChange      ctermbg=60   ctermfg=189    guibg=#5F5F87  guifg=#D7D7FF  cterm=NONE      gui=NONE
