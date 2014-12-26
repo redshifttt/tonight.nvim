@@ -21,7 +21,7 @@ hi Comment         ctermbg=NONE ctermfg=59     guibg=NONE     guifg=#515F6A  cte
 hi NonText         ctermbg=NONE ctermfg=8      guibg=NONE     guifg=#3E4853  cterm=NONE      gui=NONE
 hi Title           ctermbg=NONE ctermfg=231    guibg=NONE     guifg=#FFFFFF  cterm=NONE      gui=NONE
 
-hi Constant        ctermbg=NONE ctermfg=9      guibg=NONE     guifg=#C5735E  cterm=NONE      gui=NONE
+hi Constant        ctermbg=NONE ctermfg=167    guibg=NONE     guifg=#C5735E  cterm=NONE      gui=NONE
 hi Function        ctermbg=NONE ctermfg=9      guibg=NONE     guifg=#CC6666  cterm=NONE      gui=NONE
 hi Identifier      ctermbg=NONE ctermfg=3      guibg=NONE     guifg=#E5C078  cterm=NONE      gui=NONE
 hi PreProc         ctermbg=NONE ctermfg=109    guibg=NONE     guifg=#85A7A5  cterm=NONE      gui=NONE

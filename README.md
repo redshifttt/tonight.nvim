@@ -81,3 +81,6 @@ For Linux/BSD users, here is a sample ~/.Xresources:
     ! white
     *color7: #606360
     *color15: #DDE3DC
+
+# License
+Copyright (c) Akshay Hegde. Distributed under the same terms as Vim itself. See `:help license`
