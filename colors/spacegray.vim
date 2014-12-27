@@ -28,7 +28,7 @@ hi PreProc         ctermbg=NONE ctermfg=109    guibg=NONE     guifg=#85A7A5  cte
 hi Special         ctermbg=NONE ctermfg=103    guibg=NONE     guifg=#7D8FA3  cterm=NONE      gui=NONE
 hi SpecialKey      ctermbg=NONE ctermfg=59     guibg=NONE     guifg=#4C5966  cterm=NONE      gui=NONE
 hi Statement       ctermbg=NONE ctermfg=13     guibg=NONE     guifg=#A57A9E  cterm=NONE      gui=NONE
-hi String          ctermbg=NONE ctermfg=10     guibg=NONE     guifg=#95B47B  cterm=NONE      gui=NONE
+hi String          ctermbg=NONE ctermfg=107    guibg=NONE     guifg=#95B47B  cterm=NONE      gui=NONE
 hi Type            ctermbg=NONE ctermfg=11     guibg=NONE     guifg=#E5C078  cterm=NONE      gui=NONE
 
 hi Cursor          ctermbg=NONE ctermfg=NONE   guibg=#6C6C6C  guifg=NONE     cterm=NONE      gui=NONE
