@@ -139,4 +139,4 @@ hi link rubyRailsARClassMethod        Statement
 
 " Diff
 hi link diffAdded           String
-hi link diffRemoved         Constant
+hi link diffRemoved         Function
