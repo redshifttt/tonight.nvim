@@ -69,8 +69,8 @@ hi StatusLineNC    ctermbg=232  ctermfg=239    guibg=#1C1F20  guifg=#7C7F88  cte
 hi Underlined      ctermbg=NONE ctermfg=66     guibg=NONE     guifg=#5F8787  cterm=NONE      gui=NONE
 hi Ignore          ctermbg=NONE ctermfg=250    guibg=NONE     guifg=#BCBCBC  cterm=NONE      gui=NONE
 
-hi Visual          ctermbg=8    ctermfg=NONE   guibg=#292C2E  guifg=NONE     cterm=NONE      gui=NONE
-hi VisualNOS       ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=bold      gui=bold
+hi Visual          ctermbg=235  ctermfg=NONE   guibg=#292C2E  guifg=NONE     cterm=NONE      gui=NONE
+hi VisualNOS       ctermbg=8    ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=bold      gui=bold
 
 hi FoldColumn      ctermbg=NONE ctermfg=242    guibg=#1C1C1C  guifg=#6C6C6C  cterm=NONE      gui=NONE
 hi Folded          ctermbg=NONE ctermfg=242    guibg=#1C1C1C  guifg=#6C6C6C  cterm=NONE      gui=NONE
