@@ -50,8 +50,8 @@ Spacegray.terminator is also provided for Terminator and can be installed by
 copying to `~/.config/terminator/config` on Linux or
 `$XDG_CONFIG_HOME/terminator/config` if you're running OS X.
 
-For gnome-terminal on Linux, simply move the %gconf.xml provided to
-`~/.gconf/apps/Profiles/Default` folder.
+For gnome-terminal on Linux, simply move the `%gconf.xml`, provided with the
+download, to the `~/.gconf/apps/gnome-terminal/profiles/Default` folder.
 
 ### Xresources
 
