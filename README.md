@@ -51,7 +51,9 @@ copying to `~/.config/terminator/config` on Linux or
 `$XDG_CONFIG_HOME/terminator/config` if you're running OS X.
 
 For gnome-terminal on Linux, simply move the `%gconf.xml`, provided with the
-download, to the `~/.gconf/apps/gnome-terminal/profiles/Default` folder.
+download, to the `~/.gconf/apps/gnome-terminal/profiles/Default` folder. You
+might have to restart gconfd for changes to take effect ( Use `gconftool
+--shutdown`, move the file, then use `gconftool-2 --spawn`)
 
 ### Xresources
 
