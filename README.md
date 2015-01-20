@@ -7,15 +7,14 @@ the [spacegray](https://github.com/zdne/spacegray-xcode) theme for Xcode.
 
 Here are a few screenshots of Spacegray:
 
-### C
-
-![Spacegray in C](http://cl.ly/Yxcd/C-spacegray.png)
-
-### JavaScript
+### JavaScript (GUI Vim)
 ![Spacegray in JavaScript](http://cl.ly/Yx75/JS-Spacegray.png)
 
-### Vim
+### Vim (GUI Vim)
 ![Spacegray in Vim](http://cl.ly/Yxfr/vim-spacegray.png)
+
+### Ruby (Terminal Vim)
+![Spacegray in Ruby](http://cl.ly/ZMR9/ruby-spaceray.png)
 
 ## Installation
 
