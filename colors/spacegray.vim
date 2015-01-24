@@ -45,10 +45,10 @@ hi ModeMsg         ctermbg=NONE ctermfg=249    guibg=NONE     guifg=#808080  cte
 hi MoreMsg         ctermbg=NONE ctermfg=249    guibg=NONE     guifg=#808080  cterm=NONE      gui=NONE
 hi WarningMsg      ctermbg=NONE ctermfg=12     guibg=NONE     guifg=#7D8FA3  cterm=NONE      gui=NONE
 
-hi DiffAdd         ctermbg=65   ctermfg=193    guibg=#5F875F  guifg=#D7FFAF  cterm=NONE      gui=NONE
-hi DiffChange      ctermbg=60   ctermfg=189    guibg=#5F5F87  guifg=#D7D7FF  cterm=NONE      gui=NONE
+hi DiffAdd         ctermbg=65   ctermfg=232    guibg=#5F875F  guifg=#080808  cterm=NONE      gui=NONE
+hi DiffChange      ctermbg=237  ctermfg=NONE   guibg=#3A3A3A  guifg=NONE     cterm=NONE      gui=NONE
 hi DiffDelete      ctermbg=234  ctermfg=9      guibg=NONE     guifg=#CC6666  cterm=NONE      gui=NONE
-hi DiffText        ctermbg=234  ctermfg=12     guibg=NONE     guifg=#81A2BE  cterm=NONE      gui=NONE
+hi DiffText        ctermbg=60   ctermfg=251    guibg=#5F5F87   guifg=#D0D0D0 cterm=NONE      gui=NONE
 
 hi helpLeadBlank   ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=NONE      gui=NONE
 hi helpNormal      ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=NONE      gui=NONE
