@@ -6,6 +6,7 @@ the [spacegray](https://github.com/zdne/spacegray-xcode) theme for Xcode.
 ## Screenshots
 
 Here are a few screenshots of Spacegray:
+(Font used: Fira Mono 12pt)
 
 ### JavaScript (GUI Vim)
 ![Spacegray in JavaScript](http://cl.ly/Yx75/JS-Spacegray.png)
