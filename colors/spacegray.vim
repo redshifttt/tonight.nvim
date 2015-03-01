@@ -106,7 +106,7 @@ hi link Macro               Preproc
 hi link PreCondit           PreProc
 
 hi link Conditional         Statement
-hi link Exeption            Statement
+hi link Exception           Statement
 hi link HelpCommand         Statement
 hi link HelpExample         Statement
 hi link Keyword             Statement
