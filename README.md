@@ -36,6 +36,11 @@ with 256 color support. Most these days are. Ensure that the default TERM
 contains the string `256color`. An example would be `xterm-256color` or
 if using tmux or screen, `screen-256color`.
 
+NOTE: If you use Vim 7.4.1778 or higher, you can now use Spacegray's GUI colors
+inside terminal Vim as long as your terminal supports true colors (24-bit
+colors). To enable this, put `:set guicolors` and ignore the rest of the
+terminal color sections of this document.
+
 ### Terminal Color Palette
 
 Spacegray will look good in a dark terminal colorscheme, but if you use
