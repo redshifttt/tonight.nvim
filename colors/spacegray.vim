@@ -91,7 +91,7 @@ hi VertSplit       ctermbg=238  ctermfg=238    guibg=#444444  guifg=#444444  cte
 
 hi IncSearch       ctermbg=9    ctermfg=0      guibg=#AF5F5F  guifg=#141617  cterm=NONE      gui=NONE
 if g:spacegray_underline_search
-  hi Search        ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=underline gui=underline
+  hi Search        ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=underline,bold gui=underline,bold
 else
   hi Search        ctermbg=2    ctermfg=232    guibg=#919652  guifg=#141617  cterm=NONE      gui=NONE
 endif
