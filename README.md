@@ -65,13 +65,13 @@ Spacegray's color palette, it will look beautiful.
 On OS X, colorschemes for iTerm2 and Terminal.app are provided with the download.
 Simply double click to install.
 
-## Terminator
+### Terminator
 
 Spacegray.terminator is provided for Terminator and can be installed by
 copying to `~/.config/terminator/config` on Linux or
 `$XDG_CONFIG_HOME/terminator/config` if you're running OS X.
 
-## Gnome Terminal
+### Gnome Terminal
 
 For gnome terminal, the instructions are a tad bit complicated since
 configuration is done via dconf.
@@ -93,7 +93,7 @@ In the same terminal window, run a set of dconf write commands to set the colors
 
 The terminal should then reflect Spacegray's colors.
 
-## Xresources
+### Xresources
 
 For Linux/BSD users, here is a sample ~/.Xresources:
 
