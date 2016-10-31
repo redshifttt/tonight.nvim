@@ -52,7 +52,7 @@ if using tmux or screen, `screen-256color`.
 
 NOTE: If you use Vim 7.4.1778 or higher, you can now use Spacegray's GUI colors
 inside terminal Vim as long as your terminal supports true colors (24-bit
-colors). To enable this, put `:set guicolors` and ignore the rest of the
+colors). To enable this, put `:set termguicolors` and ignore the rest of the
 terminal color sections of this document.
 
 ### Terminal Color Palette
