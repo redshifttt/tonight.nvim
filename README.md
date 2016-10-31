@@ -65,16 +65,35 @@ Spacegray's color palette, it will look beautiful.
 On OS X, colorschemes for iTerm2 and Terminal.app are provided with the download.
 Simply double click to install.
 
-Spacegray.terminator is also provided for Terminator and can be installed by
+## Terminator
+
+Spacegray.terminator is provided for Terminator and can be installed by
 copying to `~/.config/terminator/config` on Linux or
 `$XDG_CONFIG_HOME/terminator/config` if you're running OS X.
 
-For gnome-terminal on Linux, simply move the `%gconf.xml`, provided with the
-download, to the `~/.gconf/apps/gnome-terminal/profiles/Default` folder. You
-might have to restart gconfd for changes to take effect ( Use `gconftool
---shutdown`, move the file, then use `gconftool-2 --spawn`)
+## Gnome Terminal
 
-### Xresources
+For gnome terminal, the instructions are a tad bit complicated since
+configuration is done via dconf.
+
+First, launch a new instance of Gnome Terminal and then go to Preferences ->
+Profiles and click Edit on the default profile being used. Copy the "Profile ID"
+from that window. Open a new Terminal and set a local variable like so:
+
+    profile_id=<profile_id_here>
+
+In the same terminal window, run a set of dconf write commands to set the colors:
+
+    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/visible-name "'Spacegray'"
+    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/background-color "'rgb(17,19,20)'"
+    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/foreground-color "'rgb(183,187,183)'"
+    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/use-theme-colors "false"
+    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/use-theme-transparency "false"
+    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/palette "['rgb(44,47,51)', 'rgb(176,76,80)', 'rgb(145,150,82)', 'rgb(226,153,92)', 'rgb(102,137,157)', 'rgb(141,100,148)', 'rgb(82,124,119)', 'rgb(96,99,96)', 'rgb(75,80,86)', 'rgb(176,76,80)', 'rgb(148,152,91)', 'rgb(226,153,92)', 'rgb(102,137,157)', 'rgb(141,100,148)', 'rgb(82,124,119)', 'rgb(221,227,220)']"
+
+The terminal should then reflect Spacegray's colors.
+
+## Xresources
 
 For Linux/BSD users, here is a sample ~/.Xresources:
 
