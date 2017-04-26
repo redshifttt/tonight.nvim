@@ -73,25 +73,18 @@ copying to `~/.config/terminator/config` on Linux or
 
 ### Gnome Terminal
 
-For gnome terminal, the instructions are a tad bit complicated since
-configuration is done via dconf.
+For gnome terminal, you can configure the terminal with the following set of
+gsettings commands:
 
-First, launch a new instance of Gnome Terminal and then go to Preferences ->
-Profiles and click Edit on the default profile being used. Copy the "Profile ID"
-from that window. Open a new Terminal and set a local variable like so:
+    profile_key=$(gsettings get org.gnome.Terminal.ProfilesList default | sed -e "s/'//g" | tr -d "\n")
+    profile_name=$(gsettings get org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile_key/ visible-name)
+    gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile_key/ visible-name "'Spacegray'"
+    gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile_key/ background-color "'rgb(17,19,20)'"
+    gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile_key/ foreground-color "'rgb(183,187,183)'"
+    gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile_key/ use-theme-colors "false"
+    gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile_key/ palette "['rgb(44,47,51)', 'rgb(176,76,80)', 'rgb(145,150,82)', 'rgb(226,153,92)', 'rgb(102,137,157)', 'rgb(141,100,148)', 'rgb(82,124,119)', 'rgb(96,99,96)', 'rgb(75,80,86)', 'rgb(176,76,80)', 'rgb(148,152,91)', 'rgb(226,153,92)', 'rgb(102,137,157)', 'rgb(141,100,148)', 'rgb(82,124,119)', 'rgb(221,227,220)']"
 
-    profile_id=<profile_id_here>
-
-In the same terminal window, run a set of dconf write commands to set the colors:
-
-    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/visible-name "'Spacegray'"
-    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/background-color "'rgb(17,19,20)'"
-    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/foreground-color "'rgb(183,187,183)'"
-    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/use-theme-colors "false"
-    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/use-theme-transparency "false"
-    dconf write /org/gnome/terminal/legacy/profiles:/:$profile_id/palette "['rgb(44,47,51)', 'rgb(176,76,80)', 'rgb(145,150,82)', 'rgb(226,153,92)', 'rgb(102,137,157)', 'rgb(141,100,148)', 'rgb(82,124,119)', 'rgb(96,99,96)', 'rgb(75,80,86)', 'rgb(176,76,80)', 'rgb(148,152,91)', 'rgb(226,153,92)', 'rgb(102,137,157)', 'rgb(141,100,148)', 'rgb(82,124,119)', 'rgb(221,227,220)']"
-
-The terminal should then reflect Spacegray's colors.
+gnome-terminal should then immediately reflect Spacegray colors.
 
 ### Xresources
 
