@@ -18,6 +18,11 @@ You can tweak Spacegray by enabling the following disabled options:
 
   > `let g:spacegray_use_italics = 1`
 
+3. Use lower contrast: Use a low contrast variant of SpacegraV. Put the
+   following in your `~/.vimrc` to enable it:
+
+   > `let g:spacegray_low_contrast = 1`
+
 ## Screenshots
 
 Here are a few screenshots of Spacegray:

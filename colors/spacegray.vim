@@ -12,19 +12,26 @@ if exists('syntax_on')
 endif
 
 if !exists('g:spacegray_underline_search')
-  let g:spacegray_underline_search = 0
+  let g:spacegray_underline_search = 1
 endif
 
 if !exists('g:spacegray_use_italics')
-  let g:spacegray_use_italics = 0
+  let g:spacegray_use_italics = 1
+endif
+
+if !exists('g:spacegray_low_contrast')
+  let g:spacegray_low_contrast = 1
 endif
 
 set background=dark
 let colors_name = 'spacegray'
 
 " Colorscheme definitions {{{1
-hi Normal          ctermbg=233  ctermfg=250    guibg=#111314  guifg=#B3B8C4  cterm=NONE      gui=NONE
-hi Conceal         ctermbg=NONE ctermfg=250    guibg=NONE     guifg=#B3B8C4  cterm=NONE      gui=NONE
+if g:spacegray_low_contrast
+  hi Normal        ctermbg=235  ctermfg=250    guibg=#242424  guifg=#B3B8C4  cterm=NONE      gui=NONE
+else
+  hi Normal        ctermbg=234  ctermfg=250    guibg=#111314  guifg=#B3B8C4  cterm=NONE      gui=NONE
+endif
 
 if g:spacegray_use_italics
   hi Comment       ctermbg=NONE ctermfg=59     guibg=NONE     guifg=#515F6A  cterm=italic    gui=italic
@@ -77,10 +84,20 @@ hi PmenuThumb      ctermbg=235  ctermfg=137    guibg=NONE     guifg=#171717  cte
 
 hi WildMenu        ctermbg=110  ctermfg=235    guibg=#8FAFD7  guifg=#141617  cterm=bold      gui=bold
 
-if g:spacegray_use_italics
-  hi StatusLineNC ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=italic gui=italic
+if g:spacegray_low_contrast
+  hi StatusLine     ctermbg=236 ctermfg=249 guibg=#303537 guifg=#B3B8C4 cterm=NONE   gui=NONE
+  if g:spacegray_use_italics
+    hi StatusLineNC ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=italic gui=italic
+  else
+    hi StatusLineNC ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=NONE   gui=NONE
+  endif
 else
-  hi StatusLineNC ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=NONE   gui=NONE
+    hi StatusLine   ctermbg=235 ctermfg=249 guibg=#303537 guifg=#B3B8C4 cterm=NONE   gui=NONE
+  if g:spacegray_use_italics
+    hi StatusLineNC ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=italic gui=italic
+  else
+    hi StatusLineNC ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=NONE   gui=NONE
+  endif
 endif
 
 hi Underlined      ctermbg=NONE ctermfg=66     guibg=NONE     guifg=#5F8787  cterm=NONE      gui=NONE
