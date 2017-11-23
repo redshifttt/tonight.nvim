@@ -18,24 +18,24 @@ You can tweak Spacegray by enabling the following disabled options:
 
   > `let g:spacegray_use_italics = 1`
 
-3. Use lower contrast: Use a low contrast variant of SpacegraV. Put the
+3. Use lower contrast: Use a low contrast variant of Spacegray. Put the
    following in your `~/.vimrc` to enable it:
 
-   > `let g:spacegray_low_contrast = 1`
+  > `let g:spacegray_low_contrast = 1`
 
 ## Screenshots
 
 Here are a few screenshots of Spacegray:
 (Font used: Fira Mono 12pt)
 
-### JavaScript (GUI Vim)
-![Spacegray in JavaScript](http://cl.ly/Yx75/JS-Spacegray.png)
-
-### Vim (GUI Vim)
-![Spacegray in Vim](http://cl.ly/Yxfr/vim-spacegray.png)
+### Vim (GVim)
+![Spacegray in Vim](screenshots/vim_gui.png)
 
 ### Ruby (Terminal Vim)
-![Spacegray in Ruby](http://cl.ly/ZMR9/ruby-spaceray.png)
+![Spacegray in Ruby](screenshots/ruby_cterm.png)
+
+### Haskell (Spacegray Low Contrast GVim)
+![Spacegray Low Contrast](screenshots/spacegray_low_contrast_gui.png)
 
 ## Installation
 
