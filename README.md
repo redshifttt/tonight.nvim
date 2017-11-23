@@ -12,10 +12,11 @@ You can tweak Spacegray by enabling the following disabled options:
 
   > `let g:spacegray_underline_search = 1`
 
-2. Italic Comments: Italicize comments (_note_: vim requires terminal support).
-   Put the following in your `~/.vimrc` to enable it:
+2. Use Italics: Use italics when appropriate, e.g. for comments. (_note_:
+   terminal must support italics). Put the following in your `~/.vimrc` to
+   enable it:
 
-  > `let g:spacegray_italicize_comments = 1`
+  > `let g:spacegray_use_italics = 1`
 
 ## Screenshots
 
