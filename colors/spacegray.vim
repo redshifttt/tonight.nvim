@@ -12,15 +12,15 @@ if exists('syntax_on')
 endif
 
 if !exists('g:spacegray_underline_search')
-  let g:spacegray_underline_search = 1
+  let g:spacegray_underline_search = 0
 endif
 
 if !exists('g:spacegray_use_italics')
-  let g:spacegray_use_italics = 1
+  let g:spacegray_use_italics = 0
 endif
 
 if !exists('g:spacegray_low_contrast')
-  let g:spacegray_low_contrast = 1
+  let g:spacegray_low_contrast = 0
 endif
 
 set background=dark
@@ -129,9 +129,7 @@ hi SpellRare       ctermbg=53   ctermfg=13     guibg=#5F005F  guifg=#B294BB  cte
 hi SpellCap        ctermbg=17   ctermfg=12     guibg=#00005F  guifg=#81A2BE  cterm=NONE      gui=NONE
 hi SpellLocal      ctermbg=24   ctermfg=14     guibg=#005F5F  guifg=#8ABEB7  cterm=NONE      gui=NONE
 
-" Highlight Links {{{1
-" Most of the links are mercilessly stolen from romainl's amazing Apprentice
-" theme. (https://github.com/romainl/Apprentice)
+" Highlights {{{1
 hi link Boolean             Constant
 hi link Character           Constant
 hi link Number              Constant
