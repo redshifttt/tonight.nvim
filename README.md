@@ -39,11 +39,9 @@ Here are a few screenshots of Spacegray:
 
 ## Installation
 
-If you don't have a preferred installation method, I recommend installing
-[pathogen.vim](https://github.com/tpope/vim-pathogen), and then simply copy and
-paste:
+If you use Vim 8 or better, simply copy and paste:
 
-    cd ~/.vim/bundle && git clone git://github.com/ajh17/Spacegray.vim.git
+    git clone git://github.com/ajh17/Spacegray.vim ~/.vim/pack/vendor/start/Spacegray
 
 Then in your ~/.vimrc, add this line:
 
