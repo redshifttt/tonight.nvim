@@ -81,7 +81,6 @@ For gnome terminal, you can configure the terminal with the following set of
 gsettings commands:
 
     profile_key=$(gsettings get org.gnome.Terminal.ProfilesList default | sed -e "s/'//g" | tr -d "\n")
-    profile_name=$(gsettings get org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile_key/ visible-name)
     gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile_key/ visible-name "'Spacegray'"
     gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile_key/ background-color "'rgb(17,19,20)'"
     gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile_key/ foreground-color "'rgb(183,187,183)'"
@@ -120,6 +119,8 @@ For Linux/BSD users, here is a sample ~/.Xresources:
     ! white
     *color7: #606360
     *color15: #DDE3DC
+
+For lower contrast Spacegray, use a background color of #242424
 
 # License
 Copyright (c) Akshay Hegde. Distributed under the same terms as Vim itself. See `:help license`
