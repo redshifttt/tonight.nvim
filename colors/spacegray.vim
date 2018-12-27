@@ -108,7 +108,8 @@ hi VisualNOS       ctermbg=8    ctermfg=NONE   guibg=NONE     guifg=NONE     cte
 
 hi FoldColumn      ctermbg=NONE ctermfg=242    guibg=#1C1C1C  guifg=#6C6C6C  cterm=NONE      gui=NONE
 hi Folded          ctermbg=NONE ctermfg=242    guibg=#1C1C1C  guifg=#6C6C6C  cterm=NONE      gui=NONE
-hi VertSplit       ctermbg=238  ctermfg=238    guibg=#444444  guifg=#444444  cterm=NONE      gui=NONE
+
+hi VertSplit       ctermbg=232  ctermfg=232    guibg=#1C1F20  guifg=#1C1F20  cterm=NONE      gui=NONE
 
 hi IncSearch       ctermbg=9    ctermfg=0      guibg=#AF5F5F  guifg=#141617  cterm=NONE      gui=NONE
 if g:spacegray_underline_search
