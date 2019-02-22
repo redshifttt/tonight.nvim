@@ -62,7 +62,7 @@ endif
 
 hi Conceal         ctermbg=NONE ctermfg=250    guibg=NONE     guifg=#B3B8C4  cterm=NONE      gui=NONE
 hi NonText         ctermbg=NONE ctermfg=8      guibg=NONE     guifg=#3E4853  cterm=NONE      gui=NONE
-hi Title           ctermbg=NONE ctermfg=231    guibg=NONE     guifg=#FFFFFF  cterm=NONE      gui=NONE
+hi Title           ctermbg=NONE ctermfg=250    guibg=NONE     guifg=#B3B8C4  cterm=bold      gui=bold
 hi Constant        ctermbg=NONE ctermfg=130    guibg=NONE     guifg=#C5735E  cterm=NONE      gui=NONE
 hi Function        ctermbg=NONE ctermfg=9      guibg=NONE     guifg=#CC6666  cterm=NONE      gui=NONE
 hi Identifier      ctermbg=NONE ctermfg=179    guibg=NONE     guifg=#E5C078  cterm=NONE      gui=NONE
