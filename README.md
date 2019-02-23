@@ -25,6 +25,9 @@ You can tweak Spacegray by enabling the following disabled options:
 
 ## Screenshots
 
+### Syntax Groups
+![Syntax Groups](screenshots/hl_groups.png)
+
 ### Spacegray Low Contrast
 ![Spacegray Low Contrast](screenshots/low_contrast.png)
 
