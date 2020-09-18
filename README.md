@@ -86,6 +86,10 @@ gsettings commands:
 
 gnome-terminal should then immediately reflect Spacegray colors.
 
+### Xcode
+
+Use Xcode? Try out [Spacegray-Xcode](https://github.com/ajh17/spacegray-xcode).
+
 ### Xresources
 
 For Linux/BSD users, here is a sample ~/.Xresources:
