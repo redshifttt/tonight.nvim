@@ -8,10 +8,15 @@
 " Setup {{{1
 hi clear
 
+if has("gui_running") && &background !=# 'dark'
+  set background=dark
+endif
+
 if exists('syntax_on')
   syntax reset
 endif
 
+" Options {{{1
 if !exists('g:spacegray_underline_search')
   let g:spacegray_underline_search = 0
 endif
