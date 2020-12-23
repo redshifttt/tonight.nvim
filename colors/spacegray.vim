@@ -1,9 +1,9 @@
-" SpaceGray.vim -- Vim colorscheme.
+" Spacegray.vim -- Vim colorscheme
 " Maintainer: Akshay Hegde (github.com/ajh17)
-" Version: 1.4
-" Description: A colorscheme loosely modeled after the spacegray theme for Xcode.
-" Note: This colorscheme is 256color and up only.
-" Last Change: 2020 Dec 22
+" Version: 1.5
+" Description: A colorscheme loosely modeled after the spacegray theme for Xcode
+" Note: This colorscheme is 256color and up only
+" Last Change: 2020 Dec 23
 
 " Setup {{{1
 hi clear
