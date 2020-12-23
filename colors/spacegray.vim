@@ -1,8 +1,9 @@
 " SpaceGray.vim -- Vim colorscheme.
 " Maintainer: Akshay Hegde (github.com/ajh17)
 " Version: 1.4
-" A colorscheme loosely modeled after the spacegray theme for Xcode.
-" This colorscheme is 256color and up only.
+" Description: A colorscheme loosely modeled after the spacegray theme for Xcode.
+" Note: This colorscheme is 256color and up only.
+" Last Change: 2020 Dec 22
 
 " Setup {{{1
 hi clear
@@ -48,10 +49,8 @@ let colors_name = 'spacegray'
 " Colorscheme definitions {{{1
 if g:spacegray_low_contrast
   hi Normal        ctermbg=235  ctermfg=250    guibg=#262626  guifg=#B3B8C4  cterm=NONE      gui=NONE
-  hi Terminal      ctermbg=235  ctermfg=250    guibg=#262626  guifg=#B3B8C4  cterm=NONE      gui=NONE
 else
   hi Normal        ctermbg=234  ctermfg=250    guibg=#111314  guifg=#B3B8C4  cterm=NONE      gui=NONE
-  hi Terminal      ctermbg=234  ctermfg=250    guibg=#111314  guifg=#B3B8C4  cterm=NONE      gui=NONE
 endif
 
 if g:spacegray_use_italics
@@ -187,6 +186,8 @@ hi link Delimiter           Special
 hi link SpecialChar         Special
 hi link SpecialComment      Special
 hi link Tag                 Special
+
+hi link Terminal            Normal
 
 " HTML
 hi link htmlEndTag          htmlTagName
