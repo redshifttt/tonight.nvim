@@ -29,33 +29,13 @@ if !exists('g:spacegray_low_contrast')
   let g:spacegray_low_contrast = 0
 endif
 
-let g:terminal_ansi_colors = [
-            \ '#3A3E42',
-            \ '#BF6262',
-            \ '#A2A565',
-            \ '#E9A96F',
-            \ '#789BAD',
-            \ '#9F7AA5',
-            \ '#638E8A',
-            \ '#737673',
-            \ '#5D6369',
-            \ '#BF6262',
-            \ '#A5A76E',
-            \ '#E9A96F',
-            \ '#789BAD',
-            \ '#9F7AA5',
-            \ '#9F7AA5',
-            \ '#E3E8E3'
-            \ ]
-
-set background=dark
-let colors_name = 'spacegray'
+let g:colors_name = 'spacegray'
 
 " Colorscheme definitions {{{1
 if g:spacegray_low_contrast
   hi Normal        ctermbg=235  ctermfg=250    guibg=#262626  guifg=#B3B8C4  cterm=NONE      gui=NONE
 else
-  hi Normal        ctermbg=234  ctermfg=250    guibg=#111314  guifg=#B3B8C4  cterm=NONE      gui=NONE
+  hi Normal        ctermbg=233  ctermfg=250    guibg=#111314  guifg=#B3B8C4  cterm=NONE      gui=NONE
 endif
 
 if g:spacegray_use_italics
@@ -210,3 +190,22 @@ hi link rubyRailsARClassMethod        Statement
 " Diff
 hi link diffAdded           String
 hi link diffRemoved         Function
+
+let g:terminal_ansi_colors = [
+            \ '#3A3E42',
+            \ '#BF6262',
+            \ '#A2A565',
+            \ '#E9A96F',
+            \ '#789BAD',
+            \ '#9F7AA5',
+            \ '#638E8A',
+            \ '#737673',
+            \ '#5D6369',
+            \ '#BF6262',
+            \ '#A5A76E',
+            \ '#E9A96F',
+            \ '#789BAD',
+            \ '#9F7AA5',
+            \ '#9F7AA5',
+            \ '#E3E8E3'
+            \ ]
