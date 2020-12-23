@@ -39,9 +39,9 @@ else
 endif
 
 if g:spacegray_use_italics
-  hi Comment       ctermbg=NONE ctermfg=59     guibg=NONE     guifg=#515F6A  cterm=italic    gui=italic
+  hi Comment       ctermbg=NONE ctermfg=242    guibg=NONE     guifg=#657785  cterm=italic    gui=italic
 else
-  hi Comment       ctermbg=NONE ctermfg=59     guibg=NONE     guifg=#515F6A  cterm=NONE      gui=NONE
+  hi Comment       ctermbg=NONE ctermfg=242    guibg=NONE     guifg=#657785  cterm=NONE      gui=NONE
 endif
 
 hi Conceal         ctermbg=NONE ctermfg=250    guibg=NONE     guifg=#B3B8C4  cterm=NONE      gui=NONE
