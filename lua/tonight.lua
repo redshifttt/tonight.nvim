@@ -1,20 +1,20 @@
 local colors = {
-    bg_colour      = #0c0e11;
-    fg_colour      = #d3e3f5;
-    gray           = #2c3641;
-    red            = #ec3e3e;
-    red_darker     = #d52828;
-    green          = #61c15c;
-    green_darker   = #3fb439;
-    yellow         = #f0ea6a;
-    yellow_darker  = #ddbc3d;
-    blue           = #759ed4;
-    blue_darker    = #538bd4;
-    magenta        = #a588c6;
-    magenta_darker = #9163c6;
-    teal           = #50b2c1;
-    teal_darker    = #259caf;
-    white          = #d3e3f5;
+    bg_colour      = "#0c0e11";
+    fg_colour      = "#d3e3f5";
+    gray           = "#2c3641";
+    red            = "#ec3e3e";
+    red_darker     = "#d52828";
+    green          = "#61c15c";
+    green_darker   = "#3fb439";
+    yellow         = "#f0ea6a";
+    yellow_darker  = "#ddbc3d";
+    blue           = "#759ed4";
+    blue_darker    = "#538bd4";
+    magenta        = "#a588c6";
+    magenta_darker = "#9163c6";
+    teal           = "#50b2c1";
+    teal_darker    = "#259caf";
+    white          = "#d3e3f5";
 }
 
 vim.g.terminal_color_background = bg_colour
