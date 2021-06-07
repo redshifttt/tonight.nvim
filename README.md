@@ -1,3 +1,3 @@
 # tonight.nvim
 
-coming soon
+this is a **work in progress** so **do not use**.
