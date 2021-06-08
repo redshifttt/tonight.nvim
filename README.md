@@ -1,3 +1,13 @@
-# tonight.nvim
+# tonight.nvim (beta)
 
-this is a **work in progress** so **do not use**.
+## TODO
+
+- [ ] Write a proper README
+- [ ] More language support
+    - [ ] Bash/sh
+    - [ ] Markdown
+    - [ ] HTML
+- [ ] Plugin support
+    - [ ] LSP
+    - [ ] Lualine
+    - [ ] Telescope
