@@ -43,7 +43,7 @@ local main_syntax = {
     FoldColumn   = { fg = c.gray, gui = "bold" },
     Folded       = { fg = c.gray, gui = "bold" },
     Function     = { fg = c.blue_darker },
-    IncSearch    = { bg = c.yellow, fg = c.background },
+    Search    = { bg = c.yellow, fg = c.background },
     IncSearch    = { bg = c.yellow_darker, fg = c.background },
     LineNr       = { fg = c.gray },
     MatchParen   = { bg = c.background, fg = c.yellow, gui = "underline"},
