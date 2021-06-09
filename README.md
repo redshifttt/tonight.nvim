@@ -12,3 +12,4 @@
     - [ ] Lualine
     - [ ] Telescope
 - [ ] Screenshots (who doesn't love those?)
+- [ ] Terminal Schemes
