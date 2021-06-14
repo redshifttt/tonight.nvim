@@ -8,7 +8,7 @@
 " Setup {{{1
 hi clear
 
-if has("gui_running") && &background !=# 'dark'
+if has('gui_running') && &background !=# 'dark'
   set background=dark
 endif
 
@@ -191,21 +191,23 @@ hi link rubyRailsARClassMethod        Statement
 hi link diffAdded           String
 hi link diffRemoved         Function
 
-let g:terminal_ansi_colors = [
-            \ '#3A3E42',
-            \ '#BF6262',
-            \ '#A2A565',
-            \ '#E9A96F',
-            \ '#789BAD',
-            \ '#9F7AA5',
-            \ '#638E8A',
-            \ '#737673',
-            \ '#5D6369',
-            \ '#BF6262',
-            \ '#A5A76E',
-            \ '#E9A96F',
-            \ '#789BAD',
-            \ '#9F7AA5',
-            \ '#9F7AA5',
-            \ '#E3E8E3'
-            \ ]
+if (has('terminal') && has('termguicolors') && &termguicolors) || has('gui_running')
+  let g:terminal_ansi_colors = [
+        \ '#3A3E42',
+        \ '#BF6262',
+        \ '#A2A565',
+        \ '#E9A96F',
+        \ '#789BAD',
+        \ '#9F7AA5',
+        \ '#638E8A',
+        \ '#737673',
+        \ '#5D6369',
+        \ '#BF6262',
+        \ '#A5A76E',
+        \ '#E9A96F',
+        \ '#789BAD',
+        \ '#9F7AA5',
+        \ '#9F7AA5',
+        \ '#E3E8E3'
+        \ ]
+endif
