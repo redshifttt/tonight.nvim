@@ -123,7 +123,7 @@ endif
 hi Underlined      ctermbg=NONE ctermfg=66     guibg=NONE     guifg=#5F8787  cterm=NONE      gui=NONE
 hi Ignore          ctermbg=NONE ctermfg=250    guibg=NONE     guifg=#BCBCBC  cterm=NONE      gui=NONE
 
-hi Visual          ctermbg=236  ctermfg=NONE   guibg=#404040  guifg=NONE     cterm=NONE      gui=NONE
+hi Visual          ctermbg=233  ctermfg=4      guibg=#111314  guifg=#6E9CAF  cterm=reverse   gui=reverse
 hi VisualNOS       ctermbg=8    ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=bold      gui=bold
 
 hi FoldColumn      ctermbg=NONE ctermfg=242    guibg=#1C1C1C  guifg=#6C6C6C  cterm=NONE      gui=NONE
