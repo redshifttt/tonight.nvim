@@ -5,8 +5,8 @@
 - [ ] Write a proper README
 - [ ] More language support
     - [ ] Bash/sh
-    - [ ] Markdown
-    - [ ] HTML
+    - [x] Markdown
+    - [x] HTML
 - [ ] Plugin support
     - [ ] LSP
     - [ ] Lualine
