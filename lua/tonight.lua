@@ -43,7 +43,6 @@ local main_syntax = {
     FoldColumn    = { fg = c.gray, gui = "bold" },
     Folded        = { fg = c.gray, gui = "bold" },
     Function      = { fg = c.blue_darker },
-    Search        = { bg = c.yellow, fg = c.background },
     IncSearch     = { bg = c.yellow_darker, fg = c.background },
     LineNr        = { fg = c.gray },
     MatchParen    = { bg = c.background, fg = c.yellow, gui = "underline"},
@@ -56,6 +55,7 @@ local main_syntax = {
     Question      = { fg = c.blue },
     QuickFixLine  = { bg = c.gray, style = "bold" },
     Search        = { bg = c.yellow, fg = c.background },
+    Search        = { bg = c.yellow, fg = c.background },
     SpellBad      = { sp = c.red, style = "undercurl" },
     SpellCap      = { sp = c.green_darker, style = "undercurl" },
     SpellLocal    = { sp = c.info, style = "undercurl" },
@@ -66,32 +66,42 @@ local main_syntax = {
     String        = { fg = c.green },
     Substitute    = { bg = c.red, fg = c.background },
     Type          = { fg = c.magenta },
-    Type          = { fg = c.yellow },
+    Title         = { fg = c.foreground, gui = "bold" },
+    VertSplit     = { fg = c.gray, bg = c.background },
     Visual        = { bg = c.gray },
     VisualNOS     = { bg = c.gray },
     WarningMsg    = { fg = c.red },
     Whitespace    = { fg = c.gray },
-    VertSplit     = { fg = c.gray, bg = c.background },
 }
 
 local language_syntax = {
-
     -- Markdown
-    markdownHeadingDelimiter = { fg = c.magenta },
+    markdownBlockquote       = { fg = c.gray },
+    markdownCode             = { fg = c.yellow },
+    markdownCodeBlock        = { fg = c.yellow },
+    markdownCodeDelimiter    = { fg = c.yellow },
     markdownH1               = { fg = c.foreground, gui = "bold" },
     markdownH2               = { fg = c.foreground, gui = "bold" },
     markdownH3               = { fg = c.foreground, gui = "bold" },
     markdownH4               = { fg = c.foreground, gui = "bold" },
     markdownH5               = { fg = c.foreground, gui = "bold" },
     markdownH6               = { fg = c.foreground, gui = "bold" },
-    markdownUrl              = { fg = c.blue_darker },
-    markdownLinkText         = { fg = c.teal, gui = "bold" },
+    markdownHeadingDelimiter = { fg = c.magenta },
     markdownItalic           = { fg = c.yellow },
-    markdownCode             = { fg = c.yellow },
-    markdownCodeBlock        = { fg = c.yellow },
-    markdownCodeDelimiter    = { fg = c.yellow },
-    markdownBlockquote    = { fg = c.gray },
+    markdownLinkText         = { fg = c.teal, gui = "bold" },
+    markdownUrl              = { fg = c.blue_darker },
 
+    -- HTML
+    htmlH1          = { fg = c.foreground, gui = "bold" },
+    htmlH2          = { fg = c.foreground, gui = "bold" },
+    htmlH3          = { fg = c.foreground, gui = "bold" },
+    htmlH4          = { fg = c.foreground, gui = "bold" },
+    htmlH5          = { fg = c.foreground, gui = "bold" },
+    htmlH6          = { fg = c.foreground, gui = "bold" },
+    htmlTag         = { fg = c.blue },
+    htmlEndTag      = { fg = c.blue },
+    htmlArg         = { fg = c.yellow },
+    htmlSpecialChar = { fg = c.teal },
 }
 
 local plugin_syntax = {}
