@@ -195,7 +195,7 @@ hi link rubyRailsARClassMethod        Statement
 hi link diffAdded           String
 hi link diffRemoved         Function
 
-if (has('terminal') && has('termguicolors') && &termguicolors) || has('gui_running')
+if (has('terminal') && has('termguicolors')) || has('gui_running')
   let g:terminal_ansi_colors = [
         \ '#3A3E42',
         \ '#BF6262',
