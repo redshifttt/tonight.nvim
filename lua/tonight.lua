@@ -1,4 +1,5 @@
 -- tonight.nvim: lua colour scheme inspired by tomorrow and spacegray
+require('colors')
 
 local function highlight(group, styles)
     local gui = styles.gui and 'gui=' .. styles.gui or 'gui=NONE'
@@ -9,31 +10,14 @@ local function highlight(group, styles)
     vim.api.nvim_command('highlight ' .. group .. ' ' .. gui ..' '.. sp .. ' ' .. fg .. ' ' .. bg)
 end
 
-local c = {
-    background     = "#0c0e11",
-    foreground     = "#d3e3f5",
-    gray           = "#2c3641",
-    red            = "#ec3e3e",
-    red_darker     = "#d52828",
-    green          = "#61c15c",
-    green_darker   = "#3fb439",
-    yellow         = "#f0ea6a",
-    yellow_darker  = "#ddbc3d",
-    blue           = "#759ed4",
-    blue_darker    = "#538bd4",
-    magenta        = "#a588c6",
-    magenta_darker = "#9163c6",
-    teal           = "#50b2c1",
-    teal_darker    = "#259caf",
-    white          = "#d3e3f5",
-}
-
 local main_syntax = {
     ColorColumn   = { bg = c.gray },
     Comment       = { fg = c.gray },
+    Constant      = { fg = c.foreground },
     Cursor        = { bg = c.white },
-    CursorLine    = { bg = c.background },
-    CursorLineNr  = { fg = c.foreground, fg = c.white },
+    CursorLine    = { bg = c.gray_darker },
+    CursorLineNr  = { bg = c.gray_darker, fg = c.white },
+    Delimiter     = { fg = c.magenta },
     DiffAdd       = { fg = c.green },
     DiffDelete    = { fg = c.red },
     DiffText      = { fg = c.white },
@@ -43,6 +27,7 @@ local main_syntax = {
     FoldColumn    = { fg = c.gray, gui = "bold" },
     Folded        = { fg = c.gray, gui = "bold" },
     Function      = { fg = c.blue_darker },
+    Identifier    = { fg = c.blue_darker },
     IncSearch     = { bg = c.yellow_darker, fg = c.background },
     LineNr        = { fg = c.gray },
     MatchParen    = { bg = c.background, fg = c.yellow, gui = "underline"},
@@ -50,58 +35,41 @@ local main_syntax = {
     MoreMsg       = { fg = c.blue, gui = "bold" },
     Normal        = { fg = c.foreground },
     NormalFloat   = { fg = c.foreground },
+    Number        = { fg = c.teal },
     Pmenu         = { bg = c.gray, fg = c.foreground },
     PreProc       = { fg = c.blue },
     Question      = { fg = c.blue },
     QuickFixLine  = { bg = c.gray, style = "bold" },
     Search        = { bg = c.yellow, fg = c.background },
-    Search        = { bg = c.yellow, fg = c.background },
+    Special       = { fg = c.red },
     SpellBad      = { sp = c.red, style = "undercurl" },
-    SpellCap      = { sp = c.green_darker, style = "undercurl" },
+    SpellCap      = { sp = c.blue, style = "undercurl" },
     SpellLocal    = { sp = c.info, style = "undercurl" },
     SpellRare     = { sp = c.yellow_darker, style = "undercurl" },
     Statement     = { fg = c.magenta, gui = "bold" },
     StatusLine    = { fg = c.foreground, bg = c.gray },
     StatusLineNC  = { fg = c.foreground, bg = c.gray },
-    String        = { fg = c.green },
+    String        = { fg = c.yellow_darker },
     Substitute    = { bg = c.red, fg = c.background },
-    Type          = { fg = c.magenta },
     Title         = { fg = c.foreground, gui = "bold" },
+    Todo          = { fg = c.background, bg = c.foreground, gui = "bold" },
+    Type          = { fg = c.magenta },
     VertSplit     = { fg = c.gray, bg = c.background },
-    Visual        = { bg = c.gray },
-    VisualNOS     = { bg = c.gray },
+    Visual        = { bg = c.gray_darker },
+    VisualNOS     = { bg = c.gray_darker },
     WarningMsg    = { fg = c.red },
     Whitespace    = { fg = c.gray },
 }
 
 local language_syntax = {
-    -- Markdown
-    markdownBlockquote       = { fg = c.gray },
-    markdownCode             = { fg = c.yellow },
-    markdownCodeBlock        = { fg = c.yellow },
-    markdownCodeDelimiter    = { fg = c.yellow },
-    markdownH1               = { fg = c.foreground, gui = "bold" },
-    markdownH2               = { fg = c.foreground, gui = "bold" },
-    markdownH3               = { fg = c.foreground, gui = "bold" },
-    markdownH4               = { fg = c.foreground, gui = "bold" },
-    markdownH5               = { fg = c.foreground, gui = "bold" },
-    markdownH6               = { fg = c.foreground, gui = "bold" },
-    markdownHeadingDelimiter = { fg = c.magenta },
-    markdownItalic           = { fg = c.yellow },
-    markdownLinkText         = { fg = c.teal, gui = "bold" },
-    markdownUrl              = { fg = c.blue_darker },
+    -- Shell
+    -- shOption = { fg = c.blue_darker, gui = "bold" },
+    -- shArithmetic = { fg = c.magenta_darker },
+    -- shCommandSub = { fg = c.blue },
 
-    -- HTML
-    htmlH1          = { fg = c.foreground, gui = "bold" },
-    htmlH2          = { fg = c.foreground, gui = "bold" },
-    htmlH3          = { fg = c.foreground, gui = "bold" },
-    htmlH4          = { fg = c.foreground, gui = "bold" },
-    htmlH5          = { fg = c.foreground, gui = "bold" },
-    htmlH6          = { fg = c.foreground, gui = "bold" },
-    htmlTag         = { fg = c.blue },
-    htmlEndTag      = { fg = c.blue },
-    htmlArg         = { fg = c.yellow },
-    htmlSpecialChar = { fg = c.teal },
+    -- vim help
+    helpCommand = { fg = c.teal_darker },
+    helpExample = { fg = c.green },
 }
 
 local plugin_syntax = {}
