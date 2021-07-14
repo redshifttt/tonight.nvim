@@ -12,11 +12,11 @@ I made it because the aforementioned colour schemes are great but quite dim and 
 
 ![image](screenshots/terminus.png)
 
-#### FontJetBrains Mono
+#### Font: JetBrains Mono
 
 ![image](screenshots/jetbrains_mono.png)
 
-#### FontSource Code Pro
+#### Font: Source Code Pro
 
 ![image](screenshots/source_code_pro.png)
 
