@@ -1,5 +1,5 @@
 -- tonight.nvim: lua colour scheme inspired by tomorrow and spacegray
-require('colors')
+require('colours')
 
 local function highlight(group, styles)
     local gui = styles.gui and 'gui=' .. styles.gui or 'gui=NONE'
