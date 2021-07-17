@@ -6,6 +6,16 @@ Tonight is a dark colour scheme for [Neovim](https://github.com/neovim/neovim) w
 
 I made it because the aforementioned colour schemes are great but quite dim and unappealing to look at over long periods of time. The main idea is to look at a colour and know instantly what it is *every single time* without the mental overhead of staring at it too long. This, for me, does that.
 
+## Features
+
+- Easy on the eyes for long periods of time
+- Terminal colour schemes
+- Soon to support:
+    - Neovim LSP
+    - [barbar.nvim](https://github.com/romgrk/barbar.nvim)
+    - [lualine.nvim](https://github.com/hoob3rt/lualine.nvim)
+    - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+
 ## Installation & Usage
 
 ##### Install with your favourite plugin manager
@@ -43,16 +53,6 @@ vim.cmd[[colorscheme tonight]]
 #### Font: Source Code Pro
 
 ![image](screenshots/source_code_pro.png)
-
-## Features
-
-- Easy on the eyes for long periods of time
-- Terminal colour schemes
-- Soon to support:
-    - Neovim LSP
-    - [barbar.nvim](https://github.com/romgrk/barbar.nvim)
-    - [lualine.nvim](https://github.com/hoob3rt/lualine.nvim)
-    - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 
 ## Todo
 
