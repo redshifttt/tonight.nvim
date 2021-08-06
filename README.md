@@ -10,10 +10,10 @@ I made it because the aforementioned colour schemes are great but quite dim and 
 
 - Easy on the eyes for long periods of time
 - Terminal colour schemes
+- **Lualine** theme.
 - Soon to support:
     - Neovim LSP
     - [barbar.nvim](https://github.com/romgrk/barbar.nvim)
-    - [lualine.nvim](https://github.com/hoob3rt/lualine.nvim)
     - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 
 ## Installation & Usage
