@@ -9,22 +9,22 @@ return {
   insert = {
     a = { bg = c.green, fg = c.background, gui = 'bold' },
     b = { bg = c.gray2, fg = c.green },
-    c = { bg = c.gray2, fg = c.white }
+    c = { bg = c.gray2, fg = c.gray }
   },
   visual = {
     a = { bg = c.yellow, fg = c.background, gui = 'bold' },
     b = { bg = c.gray2, fg = c.yellow },
-    c = { bg = c.gray2, fg = c.background }
+    c = { bg = c.gray2, fg = c.gray }
   },
   replace = {
-    a = { bg = c.red, fg = c.background, gui = 'bold' },
-    b = { bg = c.gray2, fg = c.red },
-    c = { bg = c.gray2, fg = c.white }
+    a = { bg = c.red2, fg = c.background, gui = 'bold' },
+    b = { bg = c.gray2, fg = c.red2 },
+    c = { bg = c.gray2, fg = c.gray }
   },
   command = {
-    a = { bg = c.blue, fg = c.background, gui = 'bold' },
-    b = { bg = c.gray2, fg = c.blue },
-    c = { bg = c.gray2, fg = c.background }
+    a = { bg = c.red, fg = c.background, gui = 'bold' },
+    b = { bg = c.gray2, fg = c.red },
+    c = { bg = c.gray2, fg = c.gray }
   },
   inactive = {
     a = { bg = c.gray2, fg = c.gray, gui = 'bold' },
