@@ -42,17 +42,7 @@ vim.cmd[[colorscheme tonight]]
 
 ## Screenshots
 
-#### Font: Terminus
-
-![image](screenshots/terminus.png)
-
-#### Font: JetBrains Mono
-
-![image](screenshots/jetbrains_mono.png)
-
-#### Font: Source Code Pro
-
-![image](screenshots/source_code_pro.png)
+![image](screenshots/screenshot.png)
 
 ## Todo
 
