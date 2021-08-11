@@ -6,6 +6,8 @@ Tonight is a dark colour scheme for [Neovim](https://github.com/neovim/neovim) w
 
 I made it because the aforementioned colour schemes are great but quite dim and unappealing to look at over long periods of time. The main idea is to look at a colour and know instantly what it is *every single time* without the mental overhead of staring at it too long. This, for me, does that.
 
+Also I wanted an excuse to learn Lua :^).
+
 ## Features
 
 - Easy on the eyes for long periods of time
