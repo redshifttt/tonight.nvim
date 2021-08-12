@@ -16,6 +16,10 @@ I made it because the aforementioned colour schemes are great but quite dim and 
     - [barbar.nvim](https://github.com/romgrk/barbar.nvim)
     - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 
+## Screenshots
+
+![image](screenshots/screenshot.png)
+
 ## Installation & Usage
 
 ##### Install with your favourite plugin manager
@@ -40,9 +44,18 @@ lua:
 vim.cmd[[colorscheme tonight]]
 ```
 
-## Screenshots
+#### Lualine
 
-![image](screenshots/screenshot.png)
+If you use Lualine then you can you can set the theme in your config:
+
+```lua
+require('lualine').setup{
+    options = {
+        theme = tonight,
+        ...
+    },
+}
+```
 
 ## Todo
 
@@ -50,7 +63,7 @@ vim.cmd[[colorscheme tonight]]
 - [ ] Plugin support
     - [ ] barbar.nvim
     - [ ] LSP
-    - [ ] Lualine
+    - [x] Lualine
     - [ ] Telescope
 - [x] Screenshots (who doesn't love those?)
 - [x] Terminal Schemes
