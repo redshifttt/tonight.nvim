@@ -29,7 +29,7 @@ Also I wanted an excuse to learn Lua :^).
 [packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use 'numpadd/tonight.nvim'
+use 'seanjbl/tonight.nvim'
 ```
 
 ##### Then enable the colourscheme in your config
