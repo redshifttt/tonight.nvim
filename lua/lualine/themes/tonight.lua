@@ -1,4 +1,4 @@
-require('colours')
+local c = require('colours')
 
 return {
     normal = {
