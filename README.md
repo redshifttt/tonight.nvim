@@ -4,6 +4,11 @@ Tonight is a dark colour scheme for [Neovim](https://github.com/neovim/neovim)
 written in Lua and based on [Tomorrow Dark](https://github.com/chriskempson/base16-tomorrow-scheme) and
 [Spacegray](https://github.com/ackyshake/Spacegray.vim).
 
+## Screenshots
+
+![image](screenshots/screenshot1.png)
+![image](screenshots/screenshot2.png)
+
 ## Why?
 
 I made it because the aforementioned colour schemes are great but quite dim and
@@ -20,11 +25,6 @@ Also I wanted an excuse to learn Lua :^).
 - **Lualine** theme.
 - **Supports LSP** with tokyodark-like highlighting of virtual text!
 - Treesitter support for the most part.
-
-## Screenshots
-
-![image](screenshots/screenshot1.png)
-![image](screenshots/screenshot2.png)
 
 ## Installation & Usage
 
