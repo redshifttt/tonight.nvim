@@ -1,9 +1,13 @@
 -- tonight.nvim: lua colour scheme inspired by tomorrow and spacegray
 local c = require('colours')
+local api = vim.api
 
 -- Useful bit of VimL to be able to retrieve the highlight group from a bit of text.
 -- let s = synID(line('.'), col('.'), 1) | echo synIDattr(s, 'name') . ' -> ' . synIDattr(synIDtrans(s), 'name')
 
+-- Borrowed from:
+-- https://github.com/folke/tokyonight.nvim/blob/8223c970677e4d88c9b6b6d81bda23daf11062bb/lua/tokyonight/util.lua#L26
+-- and slightly edited
 local function hex_to_rbg(hex_str)
     local hex = "[abcdef0-9][abcdef0-9]"
     local pat = "^#(" .. hex .. ")(" .. hex .. ")(" .. hex .. ")$"
@@ -15,9 +19,6 @@ local function hex_to_rbg(hex_str)
     return { tonumber(r, 16), tonumber(g, 16), tonumber(b, 16) }
 end
 
--- Borrowed from:
--- https://github.com/folke/tokyonight.nvim/blob/8223c970677e4d88c9b6b6d81bda23daf11062bb/lua/tokyonight/util.lua#L26
--- and slightly edited
 function blend(fg, alpha)
     bg = hex_to_rbg(c.background)
     fg = hex_to_rbg(fg)
@@ -30,26 +31,17 @@ function blend(fg, alpha)
     return string.format("#%02X%02X%02X", blend_channel(1), blend_channel(2), blend_channel(3))
 end
 
--- local function brighten(bg, alpha)
---     bg = hex_to_rbg(c.background)
---     fg = hex_to_rbg(c.fg)
---     local blend_channel = function(i)
---         local ret = (alpha * fg[i] + ((1 - alpha) * bg[i]))
---         return math.floor(math.min(math.max(0, ret), 255) + 0.5)
---     end
---     return string.format("#%02X%02X%02X", blend_channel(1), blend_channel(2), blend_channel(3))
--- end
-
 local function highlight(group, styles)
     local gui = styles.gui and 'gui=' .. styles.gui or 'gui=NONE'
     local fg = styles.fg and 'guifg='.. styles.fg or 'guifg=NONE'
     local bg = styles.bg and 'guibg='.. styles.bg or 'guibg=NONE'
 
-    vim.api.nvim_command('highlight ' .. group .. ' ' .. gui .. ' ' .. ' ' .. fg .. ' ' .. bg)
+    api.nvim_command('highlight ' .. group .. ' ' .. gui .. ' ' .. ' ' .. fg .. ' ' .. bg)
 end
 
 local groups = {
     ColorColumn = { bg = c.gray },
+    Comment = { fg = c.gray },
     Cursor = { bg = c.white },
     CursorLine = { bg = c.highlight },
     CursorLineNr = { bg = c.highlight, fg = c.white },
@@ -65,28 +57,20 @@ local groups = {
     Visual = { bg = c.highlight },
     VisualNOS = { bg = c.highlight },
     WarningMsg = { fg = c.red },
-    Whitespace = { fg = c.white },
-    NormalFloat = { bg = c.background2 },
+    Whitespace = { fg = c.gray },
+    NormalFloat = { bg = c.background_lighter },
+    Pmenu = { bg = c.background_lighter },
+    Identifier = { fg = c.magenta },
     -- Boolean = { fg = c.yellow },
-    -- Comment = { fg = c.gray },
-    -- Constant = { fg = c.blue },
-    -- Conditional = { fg = c.magenta },
     -- Delimiter = { fg = c.gray },
     -- Directory = { fg = c.blue },
-    -- Function = { fg = c.blue },
-    -- Identifier = { fg = c.blue },
-    -- Include = { fg = c.magenta },
     -- IncSearch = { bg = c.yellow, fg = c.background },
-    -- Keyword = { fg = c.magenta },
     -- Macro = { fg = c.magenta },
     -- MatchParen = { bg = c.background, fg = c.yellow, gui = "underline"},
     -- ModeMsg = { fg = c.foreground, gui = "bold" },
     -- MoreMsg = { fg = c.blue, gui = "bold" },
     -- NormalFloat = { fg = c.foreground },
-    -- Number = { fg = c.teal },
     -- NonText = { fg = c.foreground, gui = "bold" },
-    -- Operator = { fg = c.magenta },
-    -- Pmenu = { bg = c.highlight, fg = c.foreground },
     -- PreProc = { fg = c.blue },
     -- Question = { fg = c.blue },
     -- QuickFixLine = { bg = c.highlight, gui = "bold" },
@@ -95,13 +79,10 @@ local groups = {
     -- Special = { fg = c.red },
     -- SpecialChar = { fg = c.red },
     -- Statement = { fg = c.magenta },
-    -- StatusLineNC = { fg = c.foreground, bg = c.highlight },
-    -- String = { fg = c.green },
     -- Structure = { fg = c.magenta },
     -- Substitute = { bg = c.red, fg = c.background },
     -- Title = { fg = c.foreground, gui = "bold" },
     -- Todo = { fg = c.background, bg = c.foreground, gui = "bold" },
-    -- Type = { fg = c.blue },
 
     -- Treesitter slowly attempting to replace all the things
     TSCharacter = { fg = c.green },
@@ -116,7 +97,7 @@ local groups = {
     TSKeyword = { fg = c.magenta },
     TSKeywordFunction = { fg = c.functions },
     TSMethod = { fg = c.functions },
-    TSNumber = { fg = c.orangeybrown },
+    TSNumber = { fg = c.foreground },
     TSOperator = { fg = c.magenta },
     TSParameter = { fg = c.blue },
     TSProperty = { fg = c.white },
@@ -128,6 +109,8 @@ local groups = {
     TSStringEscape = { fg = c.red },
     TSType = { fg = c.yellow },
     TSVariable = { fg = c.white },
+    TSVariableBuiltin = { fg = c.white },
+    TSNamespace = { fg = c.blue },
 
     -- LSP
     LspDiagnosticsDefaultWarning = { fg = c.lsp_warn },
@@ -154,7 +137,32 @@ local groups = {
     --- Plugins:
     IndentBlanklineChar = { fg = c.indent_line },
 
+    -- vim-illuminate
     illuminatedWord = { bg = c.illuminate },
+
+    CmpItemAbbrDeprecated = { fg = c.red },
+
+    CmpItemAbbrMatch = { fg = c.blue },
+    CmpItemAbbrMatchFuzzy = { fg = c.blue },
+
+    CmpItemKindVariable = { fg = c.foreground },
+    CmpItemKindInterface = { fg = c.magenta },
+    CmpItemKindText = { fg = c.foreground },
+
+    CmpItemKindFunction = { fg = c.functions },
+    CmpItemKindMethod = { fg = c.functions },
+
+    CmpItemKindKeyword = { fg = c.magenta },
+    CmpItemKindProperty = { fg = c.foreground },
+    CmpItemKindUnit = { fg = c.foreground },
+
+    CmpItemMenu = { bg = c.background_lighter },
+
+    -- TODO: try and get a background highlight for the selectied completion
+    -- item because it will just show up as grey
+
+    FidgetTitle = { bg = c.background },
+    FidgetTask = { bg = c.background },
 
     --- Filetypes:
     -- for when you use nvim as your manpager :^)
@@ -178,6 +186,9 @@ local groups = {
     markdownListMarker = { fg = c.magenta },
     markdownUrl = { fg = c.blue },
     markdownCode = { fg = c.white },
+
+    bashTSParameter = { fg = c.foreground },
+    bashTSVariable = { fg = c.foreground },
 }
 
 for group, styles in pairs(groups) do

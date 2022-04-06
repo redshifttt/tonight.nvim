@@ -13,18 +13,16 @@ colours.teal = "#50b2c1"
 colours.white = "#BEBAC6"
 
 -- Special
-colours.background2 = "#080A0B"
-colours.window_background = "#161718"
-colours.highlight = "#11151a"
+colours.background_lighter = "#151522"
+colours.highlight = colours.background_lighter
 colours.illuminate = "#181A1C"
 colours.indent_line = "#1B2129"
 colours.functions = "#217AC2"
-colours.orangeybrown = "#D09221"
 
 -- LSP
 colours.lsp_error = colours.red
 colours.lsp_hint = colours.white
 colours.lsp_info = colours.blue
-colours.lsp_warn = colours.orangeybrown
+colours.lsp_warn = colours.magenta
 
 return colours
