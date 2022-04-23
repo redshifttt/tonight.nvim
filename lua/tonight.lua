@@ -1,43 +1,9 @@
 -- tonight.nvim: lua colour scheme inspired by tomorrow and spacegray
 local c = require('colours')
-local api = vim.api
+local util = require('util')
 
 -- Useful bit of VimL to be able to retrieve the highlight group from a bit of text.
 -- let s = synID(line('.'), col('.'), 1) | echo synIDattr(s, 'name') . ' -> ' . synIDattr(synIDtrans(s), 'name')
-
--- Borrowed from:
--- https://github.com/folke/tokyonight.nvim/blob/8223c970677e4d88c9b6b6d81bda23daf11062bb/lua/tokyonight/util.lua#L26
--- and slightly edited
-local function hex_to_rbg(hex_str)
-    local hex = "[abcdef0-9][abcdef0-9]"
-    local pat = "^#(" .. hex .. ")(" .. hex .. ")(" .. hex .. ")$"
-    hex_str = string.lower(hex_str)
-
-    assert(string.find(hex_str, pat) ~= nil, "hex_to_rgb: invalid hex_str: " .. tostring(hex_str))
-
-    local r, g, b = string.match(hex_str, pat)
-    return { tonumber(r, 16), tonumber(g, 16), tonumber(b, 16) }
-end
-
-function blend(fg, alpha)
-    bg = hex_to_rbg(c.background)
-    fg = hex_to_rbg(fg)
-
-    local blend_channel = function(i)
-        local ret = (alpha * fg[i] + ((1 - alpha) * bg[i]))
-        return math.floor(math.min(math.max(0, ret), 255) + 0.5)
-    end
-
-    return string.format("#%02X%02X%02X", blend_channel(1), blend_channel(2), blend_channel(3))
-end
-
-local function highlight(group, styles)
-    local gui = styles.gui and 'gui=' .. styles.gui or 'gui=NONE'
-    local fg = styles.fg and 'guifg='.. styles.fg or 'guifg=NONE'
-    local bg = styles.bg and 'guibg='.. styles.bg or 'guibg=NONE'
-
-    api.nvim_command('highlight ' .. group .. ' ' .. gui .. ' ' .. ' ' .. fg .. ' ' .. bg)
-end
 
 local groups = {
     ColorColumn = { bg = c.gray },
@@ -129,10 +95,10 @@ local groups = {
     DiagnosticSignHint = { fg = c.lsp_hint },
     DiagnosticSignInfo = { fg = c.lsp_info },
     DiagnosticSignWarn = { fg = c.lsp_warn },
-    DiagnosticVirtualTextError = { bg = blend(c.lsp_error, 0.1), fg = c.lsp_error, gui = "bold" },
-    DiagnosticVirtualTextHint = { bg = blend(c.lsp_hint, 0.1), fg = c.lsp_hint, gui = "bold" },
-    DiagnosticVirtualTextInfo = { bg = blend(c.lsp_info, 0.1), fg = c.lsp_info, gui = "bold" },
-    DiagnosticVirtualTextWarn = { bg = blend(c.lsp_warn, 0.1), fg = c.lsp_warn, gui = "bold" },
+    DiagnosticVirtualTextError = { bg = util.blend(c.lsp_error, 0.1), fg = c.lsp_error, gui = "bold" },
+    DiagnosticVirtualTextHint = { bg = util.blend(c.lsp_hint, 0.1), fg = c.lsp_hint, gui = "bold" },
+    DiagnosticVirtualTextInfo = { bg = util.blend(c.lsp_info, 0.1), fg = c.lsp_info, gui = "bold" },
+    DiagnosticVirtualTextWarn = { bg = util.blend(c.lsp_warn, 0.1), fg = c.lsp_warn, gui = "bold" },
 
     --- Plugins:
     IndentBlanklineChar = { fg = c.indent_line },
@@ -192,5 +158,5 @@ local groups = {
 }
 
 for group, styles in pairs(groups) do
-    highlight(group, styles)
+    util.highlight(group, styles)
 end
