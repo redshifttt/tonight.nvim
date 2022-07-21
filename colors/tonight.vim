@@ -1,3 +1,3 @@
-set cursorline
-let g:colors_name="tonight"
+lua vim.cmd [[set cursorline]]
+lua vim.g.colors_name="tonight"
 lua require 'tonight'
