@@ -1,9 +1,16 @@
 -- tonight.nvim: lua colour scheme inspired by tomorrow and spacegray
 local c = require('colours')
-local util = require('util')
 
 -- Useful bit of VimL to be able to retrieve the highlight group from a bit of text.
 -- let s = synID(line('.'), col('.'), 1) | echo synIDattr(s, 'name') . ' -> ' . synIDattr(synIDtrans(s), 'name')
+
+function highlight(group, styles)
+    local gui = styles.gui and 'gui=' .. styles.gui or 'gui=NONE'
+    local fg = styles.fg and 'guifg='.. styles.fg or 'guifg=NONE'
+    local bg = styles.bg and 'guibg='.. styles.bg or 'guibg=NONE'
+
+    vim.api.nvim_command('highlight ' .. group .. ' ' .. gui .. ' ' .. ' ' .. fg .. ' ' .. bg)
+end
 
 local groups = {
     ColorColumn = { bg = c.gray },
@@ -57,12 +64,12 @@ local groups = {
     TSConstructor = { fg = c.blue },
     TSConditional = { fg = c.magenta },
     TSField = { fg = c.red },
-    TSFuncBuiltin = { fg = c.functions },
-    TSFunction = { fg = c.functions },
+    TSFuncBuiltin = { fg = c.blue },
+    TSFunction = { fg = c.blue },
     TSInclude = { fg = c.magenta },
     TSKeyword = { fg = c.magenta },
-    TSKeywordFunction = { fg = c.functions },
-    TSMethod = { fg = c.functions },
+    TSKeywordFunction = { fg = c.blue },
+    TSMethod = { fg = c.blue },
     TSNumber = { fg = c.foreground },
     TSOperator = { fg = c.magenta },
     TSParameter = { fg = c.blue },
@@ -95,10 +102,10 @@ local groups = {
     DiagnosticSignHint = { fg = c.lsp_hint },
     DiagnosticSignInfo = { fg = c.lsp_info },
     DiagnosticSignWarn = { fg = c.lsp_warn },
-    DiagnosticVirtualTextError = { bg = util.blend(c.lsp_error, 0.1), fg = c.lsp_error, gui = "bold" },
-    DiagnosticVirtualTextHint = { bg = util.blend(c.lsp_hint, 0.1), fg = c.lsp_hint, gui = "bold" },
-    DiagnosticVirtualTextInfo = { bg = util.blend(c.lsp_info, 0.1), fg = c.lsp_info, gui = "bold" },
-    DiagnosticVirtualTextWarn = { bg = util.blend(c.lsp_warn, 0.1), fg = c.lsp_warn, gui = "bold" },
+    DiagnosticVirtualTextError = { fg = c.lsp_error, gui = "bold" },
+    DiagnosticVirtualTextHint = { fg = c.lsp_hint, gui = "bold" },
+    DiagnosticVirtualTextInfo = { fg = c.lsp_info, gui = "bold" },
+    DiagnosticVirtualTextWarn = { fg = c.lsp_warn, gui = "bold" },
 
     --- Plugins:
     IndentBlanklineChar = { fg = c.indent_line },
@@ -115,8 +122,8 @@ local groups = {
     CmpItemKindInterface = { fg = c.magenta },
     CmpItemKindText = { fg = c.foreground },
 
-    CmpItemKindFunction = { fg = c.functions },
-    CmpItemKindMethod = { fg = c.functions },
+    CmpItemKindFunction = { fg = c.blue },
+    CmpItemKindMethod = { fg = c.blue },
 
     CmpItemKindKeyword = { fg = c.magenta },
     CmpItemKindProperty = { fg = c.foreground },
@@ -158,5 +165,5 @@ local groups = {
 }
 
 for group, styles in pairs(groups) do
-    util.highlight(group, styles)
+    highlight(group, styles)
 end
