@@ -38,16 +38,10 @@ use 'redshifttt/tonight.nvim'
 
 ##### Then enable the colourscheme in your config
 
-vim script:
-
-```vim
-colorscheme tonight
-```
-
 lua:
 
 ```lua
-vim.cmd[[colorscheme tonight]]
+vim.cmd.colorscheme("tonight")
 ```
 
 #### Lualine
@@ -57,7 +51,7 @@ If you use Lualine then you can you can set the theme in your config:
 ```lua
 require('lualine').setup{
     options = {
-        theme = tonight
+        theme = "tonight"
     },
 }
 ```
