@@ -8,11 +8,11 @@ return {
             gui = 'bold'
         },
         b = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.magenta
         },
         c = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.magenta
         }
     },
@@ -23,11 +23,11 @@ return {
             gui = 'bold'
         },
         b = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.green
         },
         c = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.green
         }
     },
@@ -38,11 +38,11 @@ return {
             gui = 'bold'
         },
         b = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.yellow
         },
         c = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.yellow
         }
     },
@@ -53,11 +53,11 @@ return {
             gui = 'bold'
         },
         b = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.red
         },
         c = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.red
         }
     },
@@ -68,26 +68,26 @@ return {
             gui = 'bold'
         },
         b = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.blue
         },
         c = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.blue
         }
     },
     inactive = {
         a = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.background,
             gui = 'bold'
         },
         b = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.background
         },
         c = {
-            bg = c.background_2,
+            bg = c.background_02,
             fg = c.background
         }
     }
