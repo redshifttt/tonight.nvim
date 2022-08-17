@@ -1,4 +1,4 @@
-local c = require('colours')
+local c = require('tonight.colours')
 
 local groups = {
     ColorColumn = { bg = c.gray },
