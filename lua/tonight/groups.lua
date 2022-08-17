@@ -1,16 +1,4 @@
--- tonight.nvim: lua colour scheme inspired by tomorrow and spacegray
 local c = require('colours')
-
--- Useful bit of VimL to be able to retrieve the highlight group from a bit of text.
--- let s = synID(line('.'), col('.'), 1) | echo synIDattr(s, 'name') . ' -> ' . synIDattr(synIDtrans(s), 'name')
-
-function highlight(group, styles)
-    local gui = styles.gui and 'gui=' .. styles.gui or 'gui=NONE'
-    local fg = styles.fg and 'guifg='.. styles.fg or 'guifg=NONE'
-    local bg = styles.bg and 'guibg='.. styles.bg or 'guibg=NONE'
-
-    vim.api.nvim_command('highlight ' .. group .. ' ' .. gui .. ' ' .. ' ' .. fg .. ' ' .. bg)
-end
 
 local groups = {
     ColorColumn = { bg = c.gray },
@@ -19,10 +7,10 @@ local groups = {
     CursorLine = { bg = c.highlight },
     CursorLineNr = { bg = c.highlight, fg = c.white },
     EndOfBuffer = { fg = c.gray },
-    Error = { fg = c.red, gui = "bold" },
-    ErrorMsg = { fg = c.red, gui = "bold" },
-    FoldColumn = { fg = c.gray, gui = "bold" },
-    Folded = { fg = c.gray, gui = "bold" },
+    Error = { fg = c.red },
+    ErrorMsg = { fg = c.red },
+    FoldColumn = { fg = c.gray },
+    Folded = { fg = c.gray },
     LineNr = { fg = c.gray },
     Normal = { fg = c.foreground },
     SignColumn = { bg = c.background },
@@ -30,23 +18,22 @@ local groups = {
     Visual = { bg = c.highlight },
     VisualNOS = { bg = c.highlight },
     WarningMsg = { fg = c.red },
-    Whitespace = { fg = c.gray },
+    Whitespace = { fg = c.white },
     NormalFloat = { bg = c.background_lighter },
     Pmenu = { bg = c.background_lighter },
     Identifier = { fg = c.magenta },
-    -- Boolean = { fg = c.yellow },
     -- Delimiter = { fg = c.gray },
     -- Directory = { fg = c.blue },
     -- IncSearch = { bg = c.yellow, fg = c.background },
     -- Macro = { fg = c.magenta },
     -- MatchParen = { bg = c.background, fg = c.yellow, gui = "underline"},
-    -- ModeMsg = { fg = c.foreground, gui = "bold" },
-    -- MoreMsg = { fg = c.blue, gui = "bold" },
+    -- ModeMsg = { fg = c.foreground },
+    -- MoreMsg = { fg = c.blue },
     -- NormalFloat = { fg = c.foreground },
-    -- NonText = { fg = c.foreground, gui = "bold" },
+    -- NonText = { fg = c.foreground },
     -- PreProc = { fg = c.blue },
     -- Question = { fg = c.blue },
-    -- QuickFixLine = { bg = c.highlight, gui = "bold" },
+    -- QuickFixLine = { bg = c.highlight },
     -- Repeat = { fg = c.magenta },
     -- Search = { bg = c.yellow, fg = c.background },
     -- Special = { fg = c.red },
@@ -54,23 +41,24 @@ local groups = {
     -- Statement = { fg = c.magenta },
     -- Structure = { fg = c.magenta },
     -- Substitute = { bg = c.red, fg = c.background },
-    -- Title = { fg = c.foreground, gui = "bold" },
-    -- Todo = { fg = c.background, bg = c.foreground, gui = "bold" },
+    -- Title = { fg = c.foreground },
+    -- Todo = { fg = c.background, bg = c.foreground },
 
     -- Treesitter slowly attempting to replace all the things
+    TSBoolean = { fg = c.orange },
     TSCharacter = { fg = c.green },
     TSComment = { fg = c.gray },
-    TSConstant = { fg = c.magenta },
-    TSConstructor = { fg = c.blue },
+    TSConstant = { fg = c.orange },
+    TSConstructor = { fg = c.gray },
     TSConditional = { fg = c.magenta },
     TSField = { fg = c.red },
     TSFuncBuiltin = { fg = c.blue },
-    TSFunction = { fg = c.blue },
+    TSFunction = { fg = c.red },
     TSInclude = { fg = c.magenta },
     TSKeyword = { fg = c.magenta },
-    TSKeywordFunction = { fg = c.blue },
+    TSKeywordFunction = { fg = c.magenta },
     TSMethod = { fg = c.blue },
-    TSNumber = { fg = c.foreground },
+    TSNumber = { fg = c.orange },
     TSOperator = { fg = c.magenta },
     TSParameter = { fg = c.blue },
     TSProperty = { fg = c.white },
@@ -102,13 +90,13 @@ local groups = {
     DiagnosticSignHint = { fg = c.lsp_hint },
     DiagnosticSignInfo = { fg = c.lsp_info },
     DiagnosticSignWarn = { fg = c.lsp_warn },
-    DiagnosticVirtualTextError = { fg = c.lsp_error, gui = "bold" },
-    DiagnosticVirtualTextHint = { fg = c.lsp_hint, gui = "bold" },
-    DiagnosticVirtualTextInfo = { fg = c.lsp_info, gui = "bold" },
-    DiagnosticVirtualTextWarn = { fg = c.lsp_warn, gui = "bold" },
+    DiagnosticVirtualTextError = { fg = c.lsp_error },
+    DiagnosticVirtualTextHint = { fg = c.lsp_hint },
+    DiagnosticVirtualTextInfo = { fg = c.lsp_info },
+    DiagnosticVirtualTextWarn = { fg = c.lsp_warn },
 
     --- Plugins:
-    IndentBlanklineChar = { fg = c.indent_line },
+    IndentBlanklineChar = { fg = c.background_02 },
 
     -- vim-illuminate
     illuminatedWord = { bg = c.illuminate },
@@ -131,9 +119,6 @@ local groups = {
 
     CmpItemMenu = { bg = c.background_lighter },
 
-    -- TODO: try and get a background highlight for the selectied completion
-    -- item because it will just show up as grey
-
     FidgetTitle = { bg = c.background },
     FidgetTask = { bg = c.background },
 
@@ -142,14 +127,14 @@ local groups = {
     manOptionDesc = { fg = c.red },
     manSectionHeading = { fg = c.magenta },
     manSubheading = { fg = c.magenta },
-    manHeader = { fg = c.white, gui = "bold" },
+    manHeader = { fg = c.white },
 
-    markdownH1Delimiter = { fg = c.indent_line },
-    markdownH2Delimiter = { fg = c.indent_line },
-    markdownH3Delimiter = { fg = c.indent_line },
-    markdownH4Delimiter = { fg = c.indent_line },
-    markdownH5Delimiter = { fg = c.indent_line },
-    markdownH6Delimiter = { fg = c.indent_line },
+    markdownH1Delimiter = { fg = c.background_01 },
+    markdownH2Delimiter = { fg = c.background_01 },
+    markdownH3Delimiter = { fg = c.background_01 },
+    markdownH4Delimiter = { fg = c.background_01 },
+    markdownH5Delimiter = { fg = c.background_01 },
+    markdownH6Delimiter = { fg = c.background_01 },
     markdownH1 = { gui = "bold" },
     markdownH2 = { gui = "bold" },
     markdownH3 = { gui = "bold" },
@@ -164,6 +149,4 @@ local groups = {
     bashTSVariable = { fg = c.foreground },
 }
 
-for group, styles in pairs(groups) do
-    highlight(group, styles)
-end
+return groups
