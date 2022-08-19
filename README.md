@@ -7,7 +7,6 @@ written in Lua and based on [Tomorrow Dark](https://github.com/chriskempson/base
 ## Screenshots
 
 ![image](screenshots/screenshot1.png)
-![image](screenshots/screenshot2.png)
 
 ## Why?
 
