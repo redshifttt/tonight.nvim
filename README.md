@@ -1,12 +1,13 @@
 # tonight.nvim 🌙
 
 Tonight is a dark colour scheme for [Neovim](https://github.com/neovim/neovim)
-written in Lua and based on [Tomorrow Dark](https://github.com/chriskempson/base16-tomorrow-scheme) and
-[Spacegray](https://github.com/ackyshake/Spacegray.vim).
+written in Lua with [Tomorrow Dark](https://github.com/chriskempson/base16-tomorrow-scheme) and
+[Spacegray](https://github.com/ackyshake/Spacegray.vim) in mind.
 
 ## Screenshots
 
 ![image](screenshots/screenshot1.png)
+![image](screenshots/lsp-screenshot.png)
 
 ## Why?
 
@@ -20,14 +21,14 @@ Also I wanted an excuse to learn Lua :^).
 ## Features
 
 - Easy on the eyes for long periods of time
-- Terminal colour schemes
 - **Lualine** theme.
-- **Supports LSP** with tokyodark-like highlighting of virtual text!
-- Treesitter support for the most part.
+- **Supports LSP**.
+- Treesitter support for the most part. More support is gradually being added
+  over time.
 
 ## Installation & Usage
 
-##### Install with your favourite plugin manager
+### Install
 
 [packer](https://github.com/wbthomason/packer.nvim)
 
@@ -35,7 +36,7 @@ Also I wanted an excuse to learn Lua :^).
 use 'redshifttt/tonight.nvim'
 ```
 
-##### Then enable the colourscheme in your config
+### Enabling the colourscheme
 
 lua:
 
