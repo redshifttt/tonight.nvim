@@ -2,6 +2,7 @@ util = {}
 
 local function linker(from_group, to_group)
     vim.cmd("highlight! " .. "link " .. from_group .. " " .. to_group)
+    -- vim.cmd { cmd = "highlight", args = { "link", from_group, to_group }, bang = true }
 end
 
 function util.highlight(group, styles)
@@ -14,6 +15,7 @@ function util.highlight(group, styles)
         linker(group, link)
     else
         vim.cmd('highlight ' .. group .. ' ' .. gui .. ' ' .. ' ' .. fg .. ' ' .. bg)
+        -- vim.cmd { cmd = "highlight", args = { group, gui, fg, bg } }
     end
 end
 
