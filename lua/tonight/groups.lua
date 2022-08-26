@@ -1,4 +1,5 @@
 local c = require('tonight.colours')
+local util = require('tonight.util')
 
 local groups = {
     -- Treesitter slowly attempting to replace all the things
@@ -29,16 +30,16 @@ local groups = {
     TSStringRegex = { link = "TSPunctSpecial" },
     TSTitle = { fg = c.white, gui = "bold" },
     TSType = { fg = c.yellow },
-	TSURI = { fg = c.blue },
+    TSURI = { fg = c.blue, gui = "underline" },
     TSVariable = { fg = c.white },
     TSVariableBuiltin = { link = "TSVariable" },
     TSNamespace = { fg = c.blue },
 
     -- ColorColumn = { bg = c.gray },
     Comment = { link = "TSComment" },
-	Constant = { link = "TSConstant" },
+    Constant = { link = "TSConstant" },
     Cursor = { bg = c.white },
-    CursorLine = { bg = c.highlight },
+    CursorLine = { bg = c.background_02 },
     CursorLineNr = { link = "CursorLine" },
     EndOfBuffer = { fg = c.background },
     Error = { fg = c.red },
@@ -70,7 +71,7 @@ local groups = {
     -- QuickFixLine = { bg = c.highlight },
     -- Repeat = { fg = c.magenta },
     -- Search = { bg = c.yellow, fg = c.background },
-    -- Special = { fg = c.red },
+    Special = { link = "TSPunctSpecial" },
     -- SpecialChar = { fg = c.red },
     -- Statement = { fg = c.magenta },
     -- Structure = { fg = c.magenta },
@@ -102,9 +103,6 @@ local groups = {
 
     --- Plugins:
     IndentBlanklineChar = { fg = c.background_02 },
-
-    -- vim-illuminate
-    illuminatedWord = { bg = c.illuminate },
 
     CmpItemAbbrDeprecated = { fg = c.red },
 
@@ -152,6 +150,10 @@ local groups = {
 
     bashTSParameter = { fg = c.foreground },
     bashTSVariable = { link = "TSVariable" },
+
+    -- Help
+    helpHyperTextEntry = { link = "TSURI" },
+    helpURL = { link = "TSURI" },
 }
 
 return groups
