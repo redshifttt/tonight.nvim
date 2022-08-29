@@ -21,16 +21,13 @@ Also I wanted an excuse to learn Lua :^).
 ## Features
 
 - Easy on the eyes for long periods of time
-- **Lualine** theme.
 - **Supports LSP**.
 - Treesitter support for the most part. More support is gradually being added
   over time.
 
 ## Installation & Usage
 
-### Install
-
-[packer](https://github.com/wbthomason/packer.nvim)
+### Install with [packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use 'redshifttt/tonight.nvim'
@@ -38,22 +35,6 @@ use 'redshifttt/tonight.nvim'
 
 ### Enabling the colourscheme
 
-lua:
-
 ```lua
 vim.cmd.colorscheme("tonight")
 ```
-
-#### Lualine
-
-If you use Lualine then you can you can set the theme in your config:
-
-```lua
-require('lualine').setup{
-    options = {
-        theme = "tonight"
-    },
-}
-```
-
-**It is highly recommended that you customise your Lualine colours for your own setup instead of using defaults!**
