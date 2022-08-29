@@ -55,3 +55,5 @@ require('lualine').setup{
     },
 }
 ```
+
+**It is highly recommended that you customise your Lualine colours for your own setup instead of using defaults!**
